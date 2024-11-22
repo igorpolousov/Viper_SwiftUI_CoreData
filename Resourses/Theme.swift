@@ -15,3 +15,38 @@ extension Font {
 extension Color {
     public static let themeAccent: Color = Color("AccentColor")
 }
+
+
+import SwiftUI
+
+enum Theme: String, CaseIterable, Identifiable, Codable {
+    
+    case light
+    case dark
+    
+    var accentColor: Color {
+        switch self {
+        case .light:
+            return .accentColor
+        case .dark:
+            return .accentColor
+        }
+    }
+    
+    var mainColor: Color {
+        switch self {
+        case .light:
+            return .black
+        case .dark:
+            return .white
+        }
+    }
+    
+    var name: String {
+        rawValue.capitalized
+    }
+    
+    var id: String {
+        name
+    }
+}
