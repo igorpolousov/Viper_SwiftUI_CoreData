@@ -12,6 +12,8 @@ struct ContentView: View {
         VStack {
            
             Text("Hello, world!")
+                .foregroundStyle(Color.accent)
+                .font(Font.system(<#T##style: Font.TextStyle##Font.TextStyle#>, design: Font.Design.))
         }
         .padding()
     }
