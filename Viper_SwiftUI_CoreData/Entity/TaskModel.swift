@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct TaskModel: Identifiable, Codable {
+struct TaskModel: Identifiable, Codable, Hashable {
     
     var id: UUID
     var taskName: String

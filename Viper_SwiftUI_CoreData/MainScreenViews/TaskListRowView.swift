@@ -16,47 +16,48 @@ struct TaskListRowView: View {
     @State var taskCompleted: Bool = false
     
     var body: some View {
-        ZStack {
-            
-            RoundedRectangle(cornerRadius: 0)
-                .fill(Color.black)
-                .frame(height:106)
-            
-            HStack(alignment: .top) {
-                
-                Button {
-                    taskCompleted.toggle()
-                } label: {
+        
+        VStack(alignment: .leading) {
+            HStack {
+                Button(action: {taskCompleted.toggle()}, label: {
                     if taskCompleted {
                         ZStack {
                             Image("circleYellow")
                             Image("tick")
-                        }.padding(.top, 12)
+                        }
                     } else {
-                        Image("circleGray").padding(.top, 12)
+                        Image("circleGray")
+                            .clipped()
                     }
+                })
+               
+                if taskCompleted {
+                    Text(taskTitle)
+                        .opacity(0.5)
+                        .font(Font.mainFont)
+                        .strikethrough()
+                } else {
+                    Text(taskTitle)
+                        .font(Font.mainFont)
+                        
                 }
-                .frame(width: 24, height: 48)
-
-                
-                VStack(alignment: .listRowSeparatorLeading) {
+                Spacer()
+            }
+            
+            HStack {
+                VStack{}.frame(width: 25)
+                VStack(alignment: .leading) {
                     if taskCompleted {
-                        Text(taskTitle)
-                            .opacity(0.5)
-                            .font(Font.mainFont)
-                            .padding(.top, 10)
-                            .strikethrough()
                         Text(taskDescription)
                             .opacity(0.5)
                             .font(Font.secondaryFont)
+                            
                         Text(String(taskCreationDate.formatted(date: .numeric, time: .omitted)))
                             .opacity(0.5)
                             .font(Font.secondaryFont)
 
                     } else {
-                        Text(taskTitle)
-                            .font(Font.mainFont)
-                            .padding(.top, 10)
+                        
                         Text(taskDescription)
                             .font(Font.secondaryFont)
                         Text(String(taskCreationDate.formatted(date: .numeric, time: .omitted)))
@@ -64,10 +65,12 @@ struct TaskListRowView: View {
                         
                     }
                 }
-                .foregroundStyle(Color.white)
-                Spacer()
             }
+          
+            Spacer()
         }
+        .frame(height: 106)
+        
     }
 }
 

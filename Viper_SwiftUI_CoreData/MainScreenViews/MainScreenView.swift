@@ -9,30 +9,32 @@ import SwiftUI
 
 struct MainScreenView: View {
     
-    init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-    }
+    //    init() {
+    //        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+    //    }
+
+    @State private var taskIndex: Int = 0
+    @State private var taskCompleted: Bool = false
     
     var body: some View {
-        
         NavigationView {
-            List {
-                ForEach(TasksMockData.tasksMockData) { task in
-                    TaskListRowView(taskTitle: task.taskName, taskDescription: task.taskDescription)
+            VStack(alignment: .leading){
+                List {
+                    ForEach(TasksMockData.tasksMockData) { task in
+                        TaskListRowView(taskTitle: task.taskName, taskDescription: task.taskDescription)
+                            
+                    }
+                    
                 }
-                .listRowBackground(Color.clear)
+                
+                .buttonStyle(BorderlessButtonStyle())
+                .listStyle(.insetGrouped)
             }
             
-            .foregroundStyle(.white)
-            .listStyle(.grouped)
-            .scrollContentBackground(.hidden)
             .navigationTitle("Tasks")
-            .background(Color.black)
-            //.toolbarBackground(Color(uiColor: .black), for: .navigationBar)
         }
     }
 }
-
 
 
 #Preview {
