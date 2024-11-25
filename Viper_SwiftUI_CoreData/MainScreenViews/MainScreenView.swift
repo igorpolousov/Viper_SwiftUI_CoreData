@@ -28,6 +28,7 @@ struct MainScreenView: View {
             .scrollContentBackground(.hidden)
             .navigationTitle("Tasks")
             .background(Color.black)
+            //.toolbarBackground(Color(uiColor: .black), for: .navigationBar)
         }
     }
 }

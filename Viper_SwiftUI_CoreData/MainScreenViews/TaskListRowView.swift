@@ -11,25 +11,50 @@ struct TaskListRowView: View {
     
     var taskTitle: String = "Task title"
     var taskDescription: String = "Task description"
-    var isComleted: Bool = false
+    @State var taskCompleted: Bool = false
     
     var body: some View {
         ZStack {
             
             RoundedRectangle(cornerRadius: 0)
                 .fill(Color.black)
-                .frame(height: 50)
+                .frame(height:106)
             
             HStack(alignment: .top) {
                 
-                Image(systemName: "circle").foregroundStyle(
-                    isComleted ? Color.accentColor : Color.taskCircleColor
-                )
+                Button {
+                    taskCompleted.toggle()
+                } label: {
+                    if taskCompleted {
+                        ZStack {
+                            Image("circleYellow")
+                            Image("tick")
+                        }.padding(.top, 12)
+                    } else {
+                        Image("circleGray").padding(.top, 12)
+                    }
+                    
+                }
+
                 
                 VStack(alignment: .listRowSeparatorLeading) {
-                    Text(taskTitle).font(Font.mainFont)
-                    Text(taskDescription).font(Font.secondaryFont)
-                    
+                    if taskCompleted {
+                        Text(taskTitle)
+                            .opacity(0.5)
+                            .font(Font.mainFont)
+                            .padding(.top, 10)
+                            .strikethrough()
+                        Text(taskDescription)
+                            .opacity(0.5)
+                            .font(Font.secondaryFont)
+
+                    } else {
+                        Text(taskTitle)
+                            .font(Font.mainFont)
+                            .padding(.top, 10)
+                        Text(taskDescription)
+                            .font(Font.secondaryFont)
+                    }
                 }
                 .foregroundStyle(Color.white)
                 Spacer()
