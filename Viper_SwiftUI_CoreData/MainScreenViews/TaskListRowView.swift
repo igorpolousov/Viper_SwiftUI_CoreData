@@ -11,6 +11,8 @@ struct TaskListRowView: View {
     
     var taskTitle: String = "Task title"
     var taskDescription: String = "Task description"
+    var taskCreationDate: Date = Date.now
+    
     @State var taskCompleted: Bool = false
     
     var body: some View {
@@ -32,7 +34,7 @@ struct TaskListRowView: View {
                         }.padding(.top, 12)
                     } else {
                         Image("circleGray").padding(.top, 12)
-                    }  
+                    }
                 }
                 .frame(width: 24, height: 48)
 
@@ -47,6 +49,9 @@ struct TaskListRowView: View {
                         Text(taskDescription)
                             .opacity(0.5)
                             .font(Font.secondaryFont)
+                        Text(String(taskCreationDate.formatted(date: .numeric, time: .omitted)))
+                            .opacity(0.5)
+                            .font(Font.secondaryFont)
 
                     } else {
                         Text(taskTitle)
@@ -54,6 +59,9 @@ struct TaskListRowView: View {
                             .padding(.top, 10)
                         Text(taskDescription)
                             .font(Font.secondaryFont)
+                        Text(String(taskCreationDate.formatted(date: .numeric, time: .omitted)))
+                            .font(Font.secondaryFont)
+                        
                     }
                 }
                 .foregroundStyle(Color.white)
