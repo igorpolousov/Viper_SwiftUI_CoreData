@@ -11,6 +11,7 @@ struct TaskListRowView: View {
     
     var taskTitle: String = "Task title"
     var taskDescription: String = "Task description"
+    var isComleted: Bool = false
     
     var body: some View {
         ZStack {
@@ -21,7 +22,9 @@ struct TaskListRowView: View {
             
             HStack(alignment: .top) {
                 
-                Image(systemName: "circle").foregroundStyle(Color.white)
+                Image(systemName: "circle").foregroundStyle(
+                    isComleted ? Color.accentColor : Color.taskCircleColor
+                )
                 
                 VStack(alignment: .listRowSeparatorLeading) {
                     Text(taskTitle).font(Font.mainFont)
