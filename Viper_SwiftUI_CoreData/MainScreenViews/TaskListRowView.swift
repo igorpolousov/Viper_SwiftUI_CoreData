@@ -32,9 +32,9 @@ struct TaskListRowView: View {
                         }.padding(.top, 12)
                     } else {
                         Image("circleGray").padding(.top, 12)
-                    }
-                    
+                    }  
                 }
+                .frame(width: 24, height: 48)
 
                 
                 VStack(alignment: .listRowSeparatorLeading) {
