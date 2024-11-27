@@ -6,6 +6,25 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C2CBF33C2CF7212900721136 /* DetailScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3302CF7212900721136 /* DetailScreenView.swift */; };
+		C2CBF33D2CF7212900721136 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3322CF7212900721136 /* TaskModel.swift */; };
+		C2CBF33E2CF7212900721136 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3342CF7212900721136 /* MainScreenView.swift */; };
+		C2CBF33F2CF7212900721136 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3352CF7212900721136 /* SwiftUIView.swift */; };
+		C2CBF3402CF7212900721136 /* TaskListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3362CF7212900721136 /* TaskListRowView.swift */; };
+		C2CBF3412CF7212900721136 /* Viper_SwiftUI_CoreDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF33A2CF7212900721136 /* Viper_SwiftUI_CoreDataApp.swift */; };
+		C2CBF3422CF7212900721136 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CBF3382CF7212900721136 /* Preview Assets.xcassets */; };
+		C2CBF34B2CF7212F00721136 /* TasksMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3432CF7212F00721136 /* TasksMockData.swift */; };
+		C2CBF34C2CF7212F00721136 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3492CF7212F00721136 /* Theme.swift */; };
+		C2CBF34D2CF7212F00721136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CBF3452CF7212F00721136 /* Assets.xcassets */; };
+		C2CBF34E2CF7212F00721136 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CBF3462CF7212F00721136 /* Colors.xcassets */; };
+		C2CBF34F2CF7212F00721136 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2CBF3472CF7212F00721136 /* SF-Pro.ttf */; };
+		C2CBF3502CF7212F00721136 /* SFProText.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2CBF3482CF7212F00721136 /* SFProText.ttf */; };
+		C2CBF3532CF7213500721136 /* Viper_SwiftUI_CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3512CF7213500721136 /* Viper_SwiftUI_CoreDataTests.swift */; };
+		C2CBF3572CF7213A00721136 /* Viper_SwiftUI_CoreDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3542CF7213A00721136 /* Viper_SwiftUI_CoreDataUITests.swift */; };
+		C2CBF3582CF7213A00721136 /* Viper_SwiftUI_CoreDataUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3552CF7213A00721136 /* Viper_SwiftUI_CoreDataUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		C2CBF2CA2CF0A6B100721136 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,30 +46,23 @@
 		C2CBF2B92CF0A6AF00721136 /* Viper_SwiftUI_CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viper_SwiftUI_CoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CBF2C92CF0A6B100721136 /* Viper_SwiftUI_CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Viper_SwiftUI_CoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CBF2D32CF0A6B100721136 /* Viper_SwiftUI_CoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Viper_SwiftUI_CoreDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2CBF3302CF7212900721136 /* DetailScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenView.swift; sourceTree = "<group>"; };
+		C2CBF3322CF7212900721136 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		C2CBF3342CF7212900721136 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		C2CBF3352CF7212900721136 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		C2CBF3362CF7212900721136 /* TaskListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListRowView.swift; sourceTree = "<group>"; };
+		C2CBF3382CF7212900721136 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C2CBF33A2CF7212900721136 /* Viper_SwiftUI_CoreDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viper_SwiftUI_CoreDataApp.swift; sourceTree = "<group>"; };
+		C2CBF3432CF7212F00721136 /* TasksMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksMockData.swift; sourceTree = "<group>"; };
+		C2CBF3452CF7212F00721136 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2CBF3462CF7212F00721136 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		C2CBF3472CF7212F00721136 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
+		C2CBF3482CF7212F00721136 /* SFProText.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFProText.ttf; sourceTree = "<group>"; };
+		C2CBF3492CF7212F00721136 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		C2CBF3512CF7213500721136 /* Viper_SwiftUI_CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viper_SwiftUI_CoreDataTests.swift; sourceTree = "<group>"; };
+		C2CBF3542CF7213A00721136 /* Viper_SwiftUI_CoreDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viper_SwiftUI_CoreDataUITests.swift; sourceTree = "<group>"; };
+		C2CBF3552CF7213A00721136 /* Viper_SwiftUI_CoreDataUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viper_SwiftUI_CoreDataUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		C2CBF2BB2CF0A6AF00721136 /* Viper_SwiftUI_CoreData */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Viper_SwiftUI_CoreData;
-			sourceTree = "<group>";
-		};
-		C2CBF2CC2CF0A6B100721136 /* Viper_SwiftUI_CoreDataTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Viper_SwiftUI_CoreDataTests;
-			sourceTree = "<group>";
-		};
-		C2CBF2D62CF0A6B100721136 /* Viper_SwiftUI_CoreDataUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Viper_SwiftUI_CoreDataUITests;
-			sourceTree = "<group>";
-		};
-		C2CBF2E72CF0A81F00721136 /* Resourses */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Resourses;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C2CBF2B62CF0A6AF00721136 /* Frameworks */ = {
@@ -80,10 +92,9 @@
 		C2CBF2B02CF0A6AF00721136 = {
 			isa = PBXGroup;
 			children = (
-				C2CBF2BB2CF0A6AF00721136 /* Viper_SwiftUI_CoreData */,
-				C2CBF2E72CF0A81F00721136 /* Resourses */,
-				C2CBF2CC2CF0A6B100721136 /* Viper_SwiftUI_CoreDataTests */,
-				C2CBF2D62CF0A6B100721136 /* Viper_SwiftUI_CoreDataUITests */,
+				C2CBF33B2CF7212900721136 /* Viper_SwiftUI_CoreData */,
+				C2CBF3522CF7213500721136 /* Viper_SwiftUI_CoreDataTests */,
+				C2CBF3562CF7213A00721136 /* Viper_SwiftUI_CoreDataUITests */,
 				C2CBF2BA2CF0A6AF00721136 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,6 +107,99 @@
 				C2CBF2D32CF0A6B100721136 /* Viper_SwiftUI_CoreDataUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C2CBF3312CF7212900721136 /* DetailScreenViews */ = {
+			isa = PBXGroup;
+			children = (
+				C2CBF3302CF7212900721136 /* DetailScreenView.swift */,
+			);
+			path = DetailScreenViews;
+			sourceTree = "<group>";
+		};
+		C2CBF3332CF7212900721136 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C2CBF3322CF7212900721136 /* TaskModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		C2CBF3372CF7212900721136 /* MainScreenViews */ = {
+			isa = PBXGroup;
+			children = (
+				C2CBF3342CF7212900721136 /* MainScreenView.swift */,
+				C2CBF3352CF7212900721136 /* SwiftUIView.swift */,
+				C2CBF3362CF7212900721136 /* TaskListRowView.swift */,
+			);
+			path = MainScreenViews;
+			sourceTree = "<group>";
+		};
+		C2CBF3392CF7212900721136 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C2CBF3382CF7212900721136 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C2CBF33B2CF7212900721136 /* Viper_SwiftUI_CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C2CBF3592CF7219500721136 /* Views */,
+				C2CBF3332CF7212900721136 /* Entity */,
+				C2CBF34A2CF7212F00721136 /* Resourses */,
+				C2CBF33A2CF7212900721136 /* Viper_SwiftUI_CoreDataApp.swift */,
+				C2CBF3392CF7212900721136 /* Preview Content */,
+			);
+			path = Viper_SwiftUI_CoreData;
+			sourceTree = "<group>";
+		};
+		C2CBF3442CF7212F00721136 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				C2CBF3432CF7212F00721136 /* TasksMockData.swift */,
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
+		C2CBF34A2CF7212F00721136 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				C2CBF3442CF7212F00721136 /* MockData */,
+				C2CBF3452CF7212F00721136 /* Assets.xcassets */,
+				C2CBF3462CF7212F00721136 /* Colors.xcassets */,
+				C2CBF3472CF7212F00721136 /* SF-Pro.ttf */,
+				C2CBF3482CF7212F00721136 /* SFProText.ttf */,
+				C2CBF3492CF7212F00721136 /* Theme.swift */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		C2CBF3522CF7213500721136 /* Viper_SwiftUI_CoreDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2CBF3512CF7213500721136 /* Viper_SwiftUI_CoreDataTests.swift */,
+			);
+			path = Viper_SwiftUI_CoreDataTests;
+			sourceTree = "<group>";
+		};
+		C2CBF3562CF7213A00721136 /* Viper_SwiftUI_CoreDataUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C2CBF3542CF7213A00721136 /* Viper_SwiftUI_CoreDataUITests.swift */,
+				C2CBF3552CF7213A00721136 /* Viper_SwiftUI_CoreDataUITestsLaunchTests.swift */,
+			);
+			path = Viper_SwiftUI_CoreDataUITests;
+			sourceTree = "<group>";
+		};
+		C2CBF3592CF7219500721136 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C2CBF3372CF7212900721136 /* MainScreenViews */,
+				C2CBF3312CF7212900721136 /* DetailScreenViews */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,10 +216,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				C2CBF2BB2CF0A6AF00721136 /* Viper_SwiftUI_CoreData */,
-				C2CBF2E72CF0A81F00721136 /* Resourses */,
 			);
 			name = Viper_SwiftUI_CoreData;
 			packageProductDependencies = (
@@ -137,9 +237,6 @@
 			dependencies = (
 				C2CBF2CB2CF0A6B100721136 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				C2CBF2CC2CF0A6B100721136 /* Viper_SwiftUI_CoreDataTests */,
-			);
 			name = Viper_SwiftUI_CoreDataTests;
 			packageProductDependencies = (
 			);
@@ -159,9 +256,6 @@
 			);
 			dependencies = (
 				C2CBF2D52CF0A6B100721136 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				C2CBF2D62CF0A6B100721136 /* Viper_SwiftUI_CoreDataUITests */,
 			);
 			name = Viper_SwiftUI_CoreDataUITests;
 			packageProductDependencies = (
@@ -219,6 +313,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2CBF34D2CF7212F00721136 /* Assets.xcassets in Resources */,
+				C2CBF34E2CF7212F00721136 /* Colors.xcassets in Resources */,
+				C2CBF34F2CF7212F00721136 /* SF-Pro.ttf in Resources */,
+				C2CBF3502CF7212F00721136 /* SFProText.ttf in Resources */,
+				C2CBF3422CF7212900721136 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +342,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2CBF33C2CF7212900721136 /* DetailScreenView.swift in Sources */,
+				C2CBF34B2CF7212F00721136 /* TasksMockData.swift in Sources */,
+				C2CBF34C2CF7212F00721136 /* Theme.swift in Sources */,
+				C2CBF33D2CF7212900721136 /* TaskModel.swift in Sources */,
+				C2CBF33E2CF7212900721136 /* MainScreenView.swift in Sources */,
+				C2CBF33F2CF7212900721136 /* SwiftUIView.swift in Sources */,
+				C2CBF3402CF7212900721136 /* TaskListRowView.swift in Sources */,
+				C2CBF3412CF7212900721136 /* Viper_SwiftUI_CoreDataApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2CBF3532CF7213500721136 /* Viper_SwiftUI_CoreDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +365,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2CBF3572CF7213A00721136 /* Viper_SwiftUI_CoreDataUITests.swift in Sources */,
+				C2CBF3582CF7213A00721136 /* Viper_SwiftUI_CoreDataUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

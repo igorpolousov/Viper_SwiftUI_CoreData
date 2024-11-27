@@ -36,9 +36,11 @@ struct TaskListRowView: View {
                         .opacity(0.5)
                         .font(Font.mainFont)
                         .strikethrough()
+                        .foregroundStyle(Color.white)
                 } else {
                     Text(taskTitle)
                         .font(Font.mainFont)
+                        .foregroundStyle(Color.white)
                         
                 }
                 Spacer()
@@ -66,10 +68,12 @@ struct TaskListRowView: View {
                     }
                 }
             }
+            .foregroundStyle(Color.white)
           
             Spacer()
         }
         .frame(height: 106)
+        .background(Color.black)
         
     }
 }
