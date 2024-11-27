@@ -33,6 +33,7 @@ struct DetailScreenView: View {
                 Spacer()
                 
                 TextEditor(text: $taskDescription)
+                    .scrollContentBackground(.hidden)
                     .font(Font.mainFont)
                     .foregroundStyle(Color.white)
                     
