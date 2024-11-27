@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2ABACA52CF75A6A008A2D53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2ABACA42CF75A6A008A2D53 /* Assets.xcassets */; };
 		C2CBF33C2CF7212900721136 /* DetailScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3302CF7212900721136 /* DetailScreenView.swift */; };
 		C2CBF33D2CF7212900721136 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3322CF7212900721136 /* TaskModel.swift */; };
 		C2CBF33E2CF7212900721136 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3342CF7212900721136 /* MainScreenView.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C2ABACA42CF75A6A008A2D53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2CBF2B92CF0A6AF00721136 /* Viper_SwiftUI_CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viper_SwiftUI_CoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CBF2C92CF0A6B100721136 /* Viper_SwiftUI_CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Viper_SwiftUI_CoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CBF2D32CF0A6B100721136 /* Viper_SwiftUI_CoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Viper_SwiftUI_CoreDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +168,7 @@
 			children = (
 				C2CBF3442CF7212F00721136 /* MockData */,
 				C2CBF3462CF7212F00721136 /* Colors.xcassets */,
+				C2ABACA42CF75A6A008A2D53 /* Assets.xcassets */,
 				C2CBF3472CF7212F00721136 /* SF-Pro.ttf */,
 				C2CBF3482CF7212F00721136 /* SFProText.ttf */,
 				C2CBF3492CF7212F00721136 /* Theme.swift */,
@@ -314,6 +317,7 @@
 				C2CBF34F2CF7212F00721136 /* SF-Pro.ttf in Resources */,
 				C2CBF3502CF7212F00721136 /* SFProText.ttf in Resources */,
 				C2CBF3422CF7212900721136 /* Preview Assets.xcassets in Resources */,
+				C2ABACA52CF75A6A008A2D53 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
