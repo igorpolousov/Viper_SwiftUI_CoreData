@@ -9,10 +9,7 @@ import SwiftUI
 
 struct MainScreenView: View {
     
-    init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
-    }
+    @State private var searchText: String = ""
     
     var body: some View {
         ZStack {
@@ -20,13 +17,21 @@ struct MainScreenView: View {
                 VStack(alignment: .leading){
                     List {
                         ForEach(TasksMockData.tasksMockData) { task in
-                            TaskListRowView(taskTitle: task.taskName, taskDescription: task.taskDescription)
-                                .listRowInsets(.init(top: 0,
-                                                     leading: 0,
-                                                     bottom: 0,
-                                                     trailing: 0))
+                            ZStack {
+                                NavigationLink(destination: TaskListRowView()) {}
+                                .buttonStyle(.plain)
+                                .opacity(0.0)
+                                .frame(height: 0)
+                                
+                                TaskListRowView(taskTitle: task.taskName, taskDescription: task.taskDescription)
+                                 
+                            }
+                            .listRowBackground(Color.red)
+                            .listRowInsets(.init(top: 0,
+                                                   leading: 0,
+                                                   bottom: 0,
+                                                   trailing: 0))
                         }
-                        .listRowBackground(Color.red)
                     }
                     .buttonStyle(BorderlessButtonStyle())
                     .listStyle(.insetGrouped)
@@ -36,6 +41,7 @@ struct MainScreenView: View {
                 .navigationTitle("Tasks")
                 .toolbarBackground(.visible)
                 .toolbarColorScheme(.dark, for: .navigationBar)
+                .searchable(text: $searchText)
             }
         }
     }
