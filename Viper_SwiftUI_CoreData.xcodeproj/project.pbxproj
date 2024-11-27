@@ -16,7 +16,6 @@
 		C2CBF3422CF7212900721136 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CBF3382CF7212900721136 /* Preview Assets.xcassets */; };
 		C2CBF34B2CF7212F00721136 /* TasksMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3432CF7212F00721136 /* TasksMockData.swift */; };
 		C2CBF34C2CF7212F00721136 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3492CF7212F00721136 /* Theme.swift */; };
-		C2CBF34D2CF7212F00721136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CBF3452CF7212F00721136 /* Assets.xcassets */; };
 		C2CBF34E2CF7212F00721136 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CBF3462CF7212F00721136 /* Colors.xcassets */; };
 		C2CBF34F2CF7212F00721136 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2CBF3472CF7212F00721136 /* SF-Pro.ttf */; };
 		C2CBF3502CF7212F00721136 /* SFProText.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2CBF3482CF7212F00721136 /* SFProText.ttf */; };
@@ -54,7 +53,6 @@
 		C2CBF3382CF7212900721136 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C2CBF33A2CF7212900721136 /* Viper_SwiftUI_CoreDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viper_SwiftUI_CoreDataApp.swift; sourceTree = "<group>"; };
 		C2CBF3432CF7212F00721136 /* TasksMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksMockData.swift; sourceTree = "<group>"; };
-		C2CBF3452CF7212F00721136 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2CBF3462CF7212F00721136 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		C2CBF3472CF7212F00721136 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		C2CBF3482CF7212F00721136 /* SFProText.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFProText.ttf; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				C2CBF3442CF7212F00721136 /* MockData */,
-				C2CBF3452CF7212F00721136 /* Assets.xcassets */,
 				C2CBF3462CF7212F00721136 /* Colors.xcassets */,
 				C2CBF3472CF7212F00721136 /* SF-Pro.ttf */,
 				C2CBF3482CF7212F00721136 /* SFProText.ttf */,
@@ -313,7 +310,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2CBF34D2CF7212F00721136 /* Assets.xcassets in Resources */,
 				C2CBF34E2CF7212F00721136 /* Colors.xcassets in Resources */,
 				C2CBF34F2CF7212F00721136 /* SF-Pro.ttf in Resources */,
 				C2CBF3502CF7212F00721136 /* SFProText.ttf in Resources */,

@@ -41,6 +41,26 @@ struct TaskListRowView: View {
                     Text(taskTitle)
                         .font(Font.mainFont)
                         .foregroundStyle(Color.white)
+                        .contextMenu {
+                            Button {
+                                print("Переход на DetailScreenView")
+                            } label: {
+                                Label("Редактировать", image: "edit")
+                            }
+                            
+                            Button {
+                                print("Переход на DetailScreenView")
+                            } label: {
+                                Label("Поделиться", image: "export")
+                            }
+                            
+                            Button(role: .destructive) {
+                                print("Удалить задачу")
+                            } label: {
+                                Label("Удалить", image: "trash") 
+                            }
+
+                        }
                         
                 }
                 Spacer()
@@ -74,7 +94,13 @@ struct TaskListRowView: View {
         }
         .frame(height: 106)
         .background(Color.black)
-        
+    }
+}
+
+struct RedBorderedLabelStyle: LabelStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        Label(configuration)
+            .border(Color.red)
     }
 }
 

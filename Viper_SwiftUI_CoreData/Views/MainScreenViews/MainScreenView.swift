@@ -23,13 +23,11 @@ struct MainScreenView: View {
                             .frame(height: 0)
                         
                         TaskListRowView(taskTitle: task.taskName, taskDescription: taskDescription)
+                           
                         
                     }
-                    .listRowInsets(.init(top: 0,
-                                         leading: 0,
-                                         bottom: 0,
-                                         trailing: 0))
-                    
+                    .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+
                 }
             }
             .buttonStyle(BorderlessButtonStyle())
