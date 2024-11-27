@@ -11,7 +11,7 @@ import SwiftUI
 struct Viper_SwiftUI_CoreDataApp: App {
     var body: some Scene {
         WindowGroup {
-            MainScreenView()
+            SwiftUIView()
         }
     }
 }

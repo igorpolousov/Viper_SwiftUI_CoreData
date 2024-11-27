@@ -10,15 +10,19 @@ import SwiftUI
 struct MainScreenView: View {
     
     @State private var searchText: String = ""
+    @State var taskDescription: String = ""
     
+    @State var tasksData = TasksMockData()
+    
+
     var body: some View {
         ZStack {
             NavigationView {
                 VStack(alignment: .leading){
                     List {
-                        ForEach(TasksMockData.tasksMockData) { task in
+                        ForEach(tasksData.tasksMockData) { task in
                             ZStack {
-                                NavigationLink(destination: DetailScreenView(headerName: task.taskName, date: task.dateCreated)) {}
+                                NavigationLink(destination: DetailScreenView()) {}
                                 .buttonStyle(.plain)
                                 .opacity(0.0)
                                 .frame(height: 0)

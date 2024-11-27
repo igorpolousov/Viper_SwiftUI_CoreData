@@ -11,6 +11,8 @@ struct DetailScreenView: View {
     
     var headerName: String = "Header name"
     var date: Date = Date.now
+    @Binding var taskDescription: String
+    
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea(.all)
@@ -29,6 +31,11 @@ struct DetailScreenView: View {
                     Spacer()
                 }
                 Spacer()
+                
+                TextEditor(text: $taskDescription)
+                    .font(Font.mainFont)
+                    .foregroundStyle(Color.white)
+                    
             }
         }
         
@@ -36,5 +43,6 @@ struct DetailScreenView: View {
 }
 
 #Preview {
-    DetailScreenView()
+    @Previewable @State var description: String = "Hello description"
+    DetailScreenView(taskDescription: $description)
 }
