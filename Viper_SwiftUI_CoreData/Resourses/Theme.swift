@@ -8,6 +8,7 @@
 import SwiftUI
 
 extension Font {
+    public static let headerFont: Font = (Font.custom("SF-Pro", size: 34))
     public static let mainFont: Font = (Font.custom("SF-Pro", size: 16))
     public static let secondaryFont: Font = (Font.custom("SFProText", size: 12))
     

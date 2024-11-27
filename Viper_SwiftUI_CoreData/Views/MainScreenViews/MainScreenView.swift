@@ -18,7 +18,7 @@ struct MainScreenView: View {
                     List {
                         ForEach(TasksMockData.tasksMockData) { task in
                             ZStack {
-                                NavigationLink(destination: TaskListRowView()) {}
+                                NavigationLink(destination: DetailScreenView(headerName: task.taskName, date: task.dateCreated)) {}
                                 .buttonStyle(.plain)
                                 .opacity(0.0)
                                 .frame(height: 0)

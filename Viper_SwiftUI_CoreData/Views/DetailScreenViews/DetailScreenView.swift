@@ -8,8 +8,30 @@
 import SwiftUI
 
 struct DetailScreenView: View {
+    
+    var headerName: String = "Header name"
+    var date: Date = Date.now
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.black.ignoresSafeArea(.all)
+            VStack {
+                HStack {
+                    Text(headerName)
+                        .font(Font.headerFont)
+                        .foregroundStyle(Color.white)
+                    Spacer()
+                }
+                HStack {
+                    Text("\(date.formatted(date: .numeric, time: .omitted))")
+                        .font(Font.secondaryFont)
+                        .foregroundStyle(Color.white)
+                        .opacity(0.5)
+                    Spacer()
+                }
+                Spacer()
+            }
+        }
+        
     }
 }
 
