@@ -21,8 +21,12 @@ struct MainScreenView: View {
                     List {
                         ForEach(TasksMockData.tasksMockData) { task in
                             TaskListRowView(taskTitle: task.taskName, taskDescription: task.taskDescription)
+                                .listRowInsets(.init(top: 0,
+                                                     leading: 0,
+                                                     bottom: 0,
+                                                     trailing: 0))
                         }
-                        .listRowBackground(Color.clear)
+                        .listRowBackground(Color.red)
                     }
                     .buttonStyle(BorderlessButtonStyle())
                     .listStyle(.insetGrouped)
