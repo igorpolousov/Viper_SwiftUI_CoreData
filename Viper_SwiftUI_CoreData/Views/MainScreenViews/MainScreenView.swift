@@ -23,10 +23,10 @@ struct MainScreenView: View {
                             .frame(height: 0)
                         
                         TaskListRowView(taskTitle: task.taskName, taskDescription: taskDescription)
-                           
+                        
                     }
                     .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
-
+                    
                 }
             }
             .buttonStyle(BorderlessButtonStyle())
@@ -34,27 +34,30 @@ struct MainScreenView: View {
             .scrollContentBackground(.hidden)
             .background(Color.black)
             .navigationTitle("Tasks")
-            .toolbar {
-               
-                ToolbarItem(placement: .bottomBar) {
-                    Text("\(TasksMockData.tasksMockData.count) Tasks").foregroundStyle(Color.themeAccent)
-                    
-                    Button {
-                        print("show detail screen view")
-                    }
-                    label: {
-                        Image("newTask")
-                    }
-                    
-                }
-                
-                
-            }
             .toolbarBackground(.visible)
+            .toolbar {
+                ToolbarItem(placement: .bottomBar) {
+                    HStack {
+                        
+                        Spacer(minLength: 150)
+                        
+                        Text("\(TasksMockData.tasksMockData.count) Tasks")
+                            .foregroundStyle(Color.accentColor)
+                        
+                        Spacer()
+                        
+                        Button {
+                            print("Go to detail veiw")
+                        } label: {
+                            Image("newTask")
+                        }
+                    }
+                }
+            }
             .toolbarColorScheme(.dark, for: .navigationBar)
+            .toolbarColorScheme(.dark, for: .bottomBar)
             .searchable(text: $searchText)
         }
-        
     }
 }
 
