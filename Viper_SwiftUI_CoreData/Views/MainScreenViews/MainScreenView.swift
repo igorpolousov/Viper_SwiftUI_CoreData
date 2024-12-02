@@ -24,7 +24,6 @@ struct MainScreenView: View {
                         
                         TaskListRowView(taskTitle: task.taskName, taskDescription: taskDescription)
                            
-                        
                     }
                     .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
 
@@ -35,6 +34,22 @@ struct MainScreenView: View {
             .scrollContentBackground(.hidden)
             .background(Color.black)
             .navigationTitle("Tasks")
+            .toolbar {
+               
+                ToolbarItem(placement: .bottomBar) {
+                    Text("\(TasksMockData.tasksMockData.count) Tasks").foregroundStyle(Color.themeAccent)
+                    
+                    Button {
+                        print("show detail screen view")
+                    }
+                    label: {
+                        Image("newTask")
+                    }
+                    
+                }
+                
+                
+            }
             .toolbarBackground(.visible)
             .toolbarColorScheme(.dark, for: .navigationBar)
             .searchable(text: $searchText)
