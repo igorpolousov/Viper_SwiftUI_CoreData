@@ -23,9 +23,11 @@ struct DetailScreenView: View {
             VStack {
                 HStack {
                     // Task name info
-                    Text("\(taskName)")
+                    TextEditor(text: $taskName)
+                        .scrollContentBackground(.hidden)
                         .font(Font.headerFont)
                         .foregroundStyle(Color.white)
+                        .frame(width: UIScreen.main.bounds.width, height: 52)
                     Spacer()
                 }
                 HStack {
@@ -34,6 +36,7 @@ struct DetailScreenView: View {
                         .font(Font.secondaryFont)
                         .foregroundStyle(Color.white)
                         .opacity(0.5)
+                        .padding(.leading, 5)
                     Spacer()
                 }
                 Spacer()
