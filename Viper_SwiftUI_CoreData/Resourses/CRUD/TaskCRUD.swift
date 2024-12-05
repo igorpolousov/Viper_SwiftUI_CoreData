@@ -15,10 +15,11 @@ class TaskFunctions {
         dataStorage.append(newTask)
     }
     
-    // Update task by ID
+    // Update task by index in storage (May be not safe consider to change by ID)
     
-    static func updateTask(id: UUID, taskName: String, taskDescription: String, dataStorage: inout [TaskModel]) {
-        
+    static func updateTask(update_at index: Int, taskName: String, taskDescription: String, dataStorage: inout [TaskModel]) {
+        dataStorage[index].taskName = taskName
+        dataStorage[index].taskDescription = taskDescription
         
     }
     

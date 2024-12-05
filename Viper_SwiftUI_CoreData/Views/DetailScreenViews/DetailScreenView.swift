@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DetailScreenView: View {
         
+    // vars for showing data for task ans saving updates user made
     @State private var taskName: String = ""
     @State private var taskDescription: String = ""
     @State private var taskDate: Date = Date.now
@@ -21,12 +22,14 @@ struct DetailScreenView: View {
             Color.black.ignoresSafeArea(.all)
             VStack {
                 HStack {
+                    // Task name info
                     Text("\(taskName)")
                         .font(Font.headerFont)
                         .foregroundStyle(Color.white)
                     Spacer()
                 }
                 HStack {
+                    // Task date info
                     Text("\(taskDate.formatted(date: .numeric, time: .omitted))")
                         .font(Font.secondaryFont)
                         .foregroundStyle(Color.white)
@@ -34,7 +37,7 @@ struct DetailScreenView: View {
                     Spacer()
                 }
                 Spacer()
-                
+                // Task description editor
                 TextEditor(text: $taskDescription)
                     .scrollContentBackground(.hidden)
                     .font(Font.mainFont)
@@ -42,9 +45,15 @@ struct DetailScreenView: View {
             }
         }
         .onAppear {
-            taskName = tasksMockData.tasksMockData[taskIndex ?? 0].taskName
-            taskDescription = tasksMockData.tasksMockData[taskIndex ?? 0].taskDescription
-            taskDate = tasksMockData.tasksMockData[taskIndex ?? 0].taskDate
+            // Get data from Environment object
+            let task = tasksMockData.tasksMockData[taskIndex ?? 0]
+            taskName = task.taskName
+            taskDescription = task.taskDescription
+            taskDate = task.taskDate
+        }
+        .onDisappear {
+            // update task data
+            TaskFunctions.updateTask(update_at: taskIndex ?? 0, taskName: taskName, taskDescription: taskDescription, dataStorage: &tasksMockData.tasksMockData)
         }
     }
 }

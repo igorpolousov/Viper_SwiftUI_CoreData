@@ -16,10 +16,12 @@ struct MainScreenView: View {
     var body: some View {
         ZStack {
             NavigationView {
+                // Show list of available tasks
                 List {
                     ForEach(tasksMockData.tasksMockData, id: \.self) { task in
                         let taskIndex = tasksMockData.tasksMockData.firstIndex(of: task)
                         ZStack {
+                            // Go to Task Details Screen for editing
                             NavigationLink(destination: DetailScreenView(taskIndex: taskIndex)) {}
                                 .buttonStyle(.plain)
                                 .opacity(0.0)
@@ -39,7 +41,7 @@ struct MainScreenView: View {
                 .background(Color.black)
                 .navigationTitle("Tasks")
                 .toolbarBackground(.visible)
-                // Bottom toolbar
+                // Bottom toolbar: task counter + new task button
                 .toolbar {
                     ToolbarItem(placement: .bottomBar) {
                         HStack {
