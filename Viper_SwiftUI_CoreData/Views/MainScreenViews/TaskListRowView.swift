@@ -11,7 +11,7 @@ struct TaskListRowView: View {
     
     var taskName: String = "Task name"
     var taskDescription: String = "Task description"
-    var taskCreationDate: Date = Date.now
+    var taskDate: Date = Date.now
     
     @State var taskCompleted: Bool = false
     
@@ -93,7 +93,7 @@ struct TaskListRowView: View {
                             .opacity(0.5)
                             .font(Font.secondaryFont)
                             
-                        Text(String(taskCreationDate.formatted(date: .numeric, time: .omitted)))
+                        Text(String(taskDate.formatted(date: .numeric, time: .omitted)))
                             .opacity(0.5)
                             .font(Font.secondaryFont)
 
@@ -101,7 +101,7 @@ struct TaskListRowView: View {
                         
                         Text(taskDescription)
                             .font(Font.secondaryFont)
-                        Text(String(taskCreationDate.formatted(date: .numeric, time: .omitted)))
+                        Text(String(taskDate.formatted(date: .numeric, time: .omitted)))
                             .font(Font.secondaryFont)
                         
                     }

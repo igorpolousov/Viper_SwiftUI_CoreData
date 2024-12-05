@@ -13,7 +13,7 @@ struct TaskModel: Identifiable, Codable, Hashable {
     var id: UUID
     var taskName: String
     var taskDescription: String
-    var dateCreated: Date
+    var taskDate: Date
     var isCompleted: Bool
     
 }

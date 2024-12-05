@@ -10,8 +10,6 @@ import SwiftUI
 struct MainScreenView: View {
     
     @State private var searchText: String = ""
-    @State var taskDescription: String = "Description"
-    @State var taskName: String = ""
     
     @EnvironmentObject var tasksMockData: TasksMockData
     
@@ -20,19 +18,21 @@ struct MainScreenView: View {
             NavigationView {
                 List {
                     ForEach(tasksMockData.tasksMockData, id: \.self) { task in
+                        let taskIndex = tasksMockData.tasksMockData.firstIndex(of: task)
                         ZStack {
-                            NavigationLink(destination: DetailScreenView(taskName: "", date: Date.now, taskDescription: $taskDescription)) {}
+                            NavigationLink(destination: DetailScreenView(taskIndex: taskIndex)) {}
                                 .buttonStyle(.plain)
                                 .opacity(0.0)
                                 .frame(height: 0)
                             
-                            TaskListRowView(taskName: task.taskName, taskDescription: task.taskDescription, taskCreationDate: Date.now, taskCompleted: false)
+                            TaskListRowView(taskName: task.taskName, taskDescription: task.taskDescription, taskDate: task.taskDate, taskCompleted: false)
                             
                         }
                         .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
                         
                     }
                 }
+                // buttonStyle allows TaskListRowView to work buttons correctly
                 .buttonStyle(BorderlessButtonStyle())
                 .listStyle(.insetGrouped)
                 .scrollContentBackground(.hidden)
@@ -56,7 +56,6 @@ struct MainScreenView: View {
                             Button {
                                 withAnimation(.easeInOut(duration: 0.25)) {
                                     TaskFunctions.createNewTask(dataStorage: &tasksMockData.tasksMockData)
-                                    
                                 }
                             } label: {
                                 Image("newTask")
