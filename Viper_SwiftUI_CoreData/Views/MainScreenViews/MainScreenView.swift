@@ -6,20 +6,19 @@
 //
 
 import SwiftUI
+import Combine
 
 struct MainScreenView: View {
     
-    @State private var searchText: String = ""
-    
-    @EnvironmentObject var tasksMockData: TasksMockData
+    @EnvironmentObject var tasksData: TasksData
     
     var body: some View {
         ZStack {
             NavigationView {
                 // Show list of available tasks
-                List {
-                    ForEach(tasksMockData.tasksMockData, id: \.self) { task in
-                        let taskIndex = tasksMockData.tasksMockData.firstIndex(of: task)
+                List { // Consider to use Scroll view instead of List -> Make code easyer
+                    ForEach(tasksData.isSeaching ? tasksData.filteredTasks : tasksData.allTasks, id: \.self) { task in
+                        let taskIndex = tasksData.allTasks.firstIndex(of: task)
                         ZStack {
                             // Go to Task Details Screen for editing
                             NavigationLink(destination: DetailScreenView(taskIndex: taskIndex)) {}
@@ -49,7 +48,7 @@ struct MainScreenView: View {
                             Spacer(minLength: 150)
                             
                             // Tasks counter bottom toolbar
-                            Text("\(tasksMockData.tasksMockData.count) Tasks")
+                            Text("\(tasksData.allTasks.count) Tasks")
                                 .foregroundStyle(Color.accentColor)
                             
                             Spacer()
@@ -57,7 +56,7 @@ struct MainScreenView: View {
                             // Creating new task button
                             Button {
                                 withAnimation(.easeInOut(duration: 0.25)) {
-                                    TaskFunctions.createNewTask(dataStorage: &tasksMockData.tasksMockData)
+                                    TaskFunctions.createNewTask(dataStorage: &tasksData.allTasks)
                                 }
                             } label: {
                                 Image("newTask")
@@ -68,7 +67,7 @@ struct MainScreenView: View {
                 // Style setup for bottom toolbar
                 .toolbarColorScheme(.dark, for: .navigationBar)
                 .toolbarColorScheme(.dark, for: .bottomBar)
-                .searchable(text: $searchText)
+                .searchable(text: $tasksData.searchText, placement: .automatic, prompt: Text("Search in tasks"))
             }
         }
     }
@@ -77,5 +76,5 @@ struct MainScreenView: View {
 
 #Preview {
     MainScreenView()
-        .environmentObject(TasksMockData())
+        .environmentObject(TasksData())
 }

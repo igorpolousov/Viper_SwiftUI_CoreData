@@ -14,7 +14,7 @@ struct DetailScreenView: View {
     @State private var taskDescription: String = ""
     @State private var taskDate: Date = Date.now
     
-    @EnvironmentObject var tasksMockData: TasksMockData
+    @EnvironmentObject var tasksMockData: TasksData
     @State var taskIndex: Int?
     
     var body: some View {
@@ -49,14 +49,14 @@ struct DetailScreenView: View {
         }
         .onAppear {
             // Get data from Environment object
-            let task = tasksMockData.tasksMockData[taskIndex ?? 0]
+            let task = tasksMockData.allTasks[taskIndex ?? 0]
             taskName = task.taskName
             taskDescription = task.taskDescription
             taskDate = task.taskDate
         }
         .onDisappear {
             // update task data
-            TaskFunctions.updateTask(update_at: taskIndex ?? 0, taskName: taskName, taskDescription: taskDescription, dataStorage: &tasksMockData.tasksMockData)
+            TaskFunctions.updateTask(update_at: taskIndex ?? 0, taskName: taskName, taskDescription: taskDescription, dataStorage: &tasksMockData.allTasks)
         }
     }
 }
@@ -64,5 +64,5 @@ struct DetailScreenView: View {
 #Preview {
     //@Previewable @State var taskDescription: String = ""
     DetailScreenView(taskIndex: 0)
-        .environmentObject(TasksMockData())
+        .environmentObject(TasksData())
 }

@@ -15,7 +15,7 @@
 		C2CBF3402CF7212900721136 /* TaskListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3362CF7212900721136 /* TaskListRowView.swift */; };
 		C2CBF3412CF7212900721136 /* Viper_SwiftUI_CoreDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF33A2CF7212900721136 /* Viper_SwiftUI_CoreDataApp.swift */; };
 		C2CBF3422CF7212900721136 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CBF3382CF7212900721136 /* Preview Assets.xcassets */; };
-		C2CBF34B2CF7212F00721136 /* TasksMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3432CF7212F00721136 /* TasksMockData.swift */; };
+		C2CBF34B2CF7212F00721136 /* TasksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3432CF7212F00721136 /* TasksData.swift */; };
 		C2CBF34C2CF7212F00721136 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3492CF7212F00721136 /* Theme.swift */; };
 		C2CBF34E2CF7212F00721136 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CBF3462CF7212F00721136 /* Colors.xcassets */; };
 		C2CBF34F2CF7212F00721136 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2CBF3472CF7212F00721136 /* SF-Pro.ttf */; };
@@ -54,7 +54,7 @@
 		C2CBF3362CF7212900721136 /* TaskListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListRowView.swift; sourceTree = "<group>"; };
 		C2CBF3382CF7212900721136 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C2CBF33A2CF7212900721136 /* Viper_SwiftUI_CoreDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viper_SwiftUI_CoreDataApp.swift; sourceTree = "<group>"; };
-		C2CBF3432CF7212F00721136 /* TasksMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksMockData.swift; sourceTree = "<group>"; };
+		C2CBF3432CF7212F00721136 /* TasksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksData.swift; sourceTree = "<group>"; };
 		C2CBF3462CF7212F00721136 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		C2CBF3472CF7212F00721136 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		C2CBF3482CF7212F00721136 /* SFProText.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFProText.ttf; sourceTree = "<group>"; };
@@ -165,7 +165,7 @@
 		C2CBF3442CF7212F00721136 /* MockData */ = {
 			isa = PBXGroup;
 			children = (
-				C2CBF3432CF7212F00721136 /* TasksMockData.swift */,
+				C2CBF3432CF7212F00721136 /* TasksData.swift */,
 			);
 			path = MockData;
 			sourceTree = "<group>";
@@ -351,7 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2CBF33C2CF7212900721136 /* DetailScreenView.swift in Sources */,
-				C2CBF34B2CF7212F00721136 /* TasksMockData.swift in Sources */,
+				C2CBF34B2CF7212F00721136 /* TasksData.swift in Sources */,
 				C2ABACA82CFDC9AA008A2D53 /* TaskCRUD.swift in Sources */,
 				C2CBF34C2CF7212F00721136 /* Theme.swift in Sources */,
 				C2CBF33D2CF7212900721136 /* TaskModel.swift in Sources */,

@@ -11,7 +11,7 @@ import SwiftUI
 struct Viper_SwiftUI_CoreDataApp: App {
     
     // Data for List view
-    var tasksMockData = TasksMockData()
+    var tasksMockData = TasksData()
     
     var body: some Scene {
         WindowGroup {
