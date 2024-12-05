@@ -9,7 +9,10 @@ import SwiftUI
 
 struct DetailScreenView: View {
         
+    @State private var taskName: String = ""
     @State private var taskDescription: String = ""
+    @State private var taskDate: Date = Date.now
+    
     @EnvironmentObject var tasksMockData: TasksMockData
     @State var taskIndex: Int?
     
@@ -18,13 +21,13 @@ struct DetailScreenView: View {
             Color.black.ignoresSafeArea(.all)
             VStack {
                 HStack {
-                    Text(tasksMockData.tasksMockData[taskIndex ?? 0].taskName)
+                    Text("\(taskName)")
                         .font(Font.headerFont)
                         .foregroundStyle(Color.white)
                     Spacer()
                 }
                 HStack {
-                    Text("\(tasksMockData.tasksMockData[taskIndex ?? 0].taskDate.formatted(date: .numeric, time: .omitted))")
+                    Text("\(taskDate.formatted(date: .numeric, time: .omitted))")
                         .font(Font.secondaryFont)
                         .foregroundStyle(Color.white)
                         .opacity(0.5)
@@ -39,7 +42,9 @@ struct DetailScreenView: View {
             }
         }
         .onAppear {
+            taskName = tasksMockData.tasksMockData[taskIndex ?? 0].taskName
             taskDescription = tasksMockData.tasksMockData[taskIndex ?? 0].taskDescription
+            taskDate = tasksMockData.tasksMockData[taskIndex ?? 0].taskDate
         }
     }
 }
