@@ -10,53 +10,65 @@ import SwiftUI
 struct MainScreenView: View {
     
     @State private var searchText: String = ""
-    @State var taskDescription: String = ""
+    @State var taskDescription: String = "Description"
+    @State var taskName: String = ""
+    
+    @EnvironmentObject var tasksMockData: TasksMockData
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(TasksMockData.tasksMockData) { task in
-                    ZStack {
-                        NavigationLink(destination: DetailScreenView( taskDescription: $taskDescription)) {}
-                            .buttonStyle(.plain)
-                            .opacity(0.0)
-                            .frame(height: 0)
-                        
-                        TaskListRowView(taskTitle: task.taskName, taskDescription: taskDescription)
+        ZStack {
+            NavigationView {
+                List {
+                    ForEach(tasksMockData.tasksMockData, id: \.self) { task in
+                        ZStack {
+                            NavigationLink(destination: DetailScreenView(taskName: "", date: Date.now, taskDescription: $taskDescription)) {}
+                                .buttonStyle(.plain)
+                                .opacity(0.0)
+                                .frame(height: 0)
+                            
+                            TaskListRowView(taskName: task.taskName, taskDescription: task.taskDescription, taskCreationDate: Date.now, taskCompleted: false)
+                            
+                        }
+                        .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
                         
                     }
-                    .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
-                    
                 }
-            }
-            .buttonStyle(BorderlessButtonStyle())
-            .listStyle(.insetGrouped)
-            .scrollContentBackground(.hidden)
-            .background(Color.black)
-            .navigationTitle("Tasks")
-            .toolbarBackground(.visible)
-            .toolbar {
-                ToolbarItem(placement: .bottomBar) {
-                    HStack {
-                        
-                        Spacer(minLength: 150)
-                        
-                        Text("\(TasksMockData.tasksMockData.count) Tasks")
-                            .foregroundStyle(Color.accentColor)
-                        
-                        Spacer()
-                        
-                        Button {
-                            print("Go to detail veiw")
-                        } label: {
-                            Image("newTask")
+                .buttonStyle(BorderlessButtonStyle())
+                .listStyle(.insetGrouped)
+                .scrollContentBackground(.hidden)
+                .background(Color.black)
+                .navigationTitle("Tasks")
+                .toolbarBackground(.visible)
+                // Bottom toolbar
+                .toolbar {
+                    ToolbarItem(placement: .bottomBar) {
+                        HStack {
+                            
+                            Spacer(minLength: 150)
+                            
+                            // Tasks counter bottom toolbar
+                            Text("\(tasksMockData.tasksMockData.count) Tasks")
+                                .foregroundStyle(Color.accentColor)
+                            
+                            Spacer()
+                            
+                            // Creating new task button
+                            Button {
+                                withAnimation(.easeInOut(duration: 0.25)) {
+                                    TaskFunctions.createNewTask(dataStorage: &tasksMockData.tasksMockData)
+                                    
+                                }
+                            } label: {
+                                Image("newTask")
+                            }
                         }
                     }
                 }
+                // Style setup for bottom toolbar
+                .toolbarColorScheme(.dark, for: .navigationBar)
+                .toolbarColorScheme(.dark, for: .bottomBar)
+                .searchable(text: $searchText)
             }
-            .toolbarColorScheme(.dark, for: .navigationBar)
-            .toolbarColorScheme(.dark, for: .bottomBar)
-            .searchable(text: $searchText)
         }
     }
 }
@@ -64,4 +76,5 @@ struct MainScreenView: View {
 
 #Preview {
     MainScreenView()
+        .environmentObject(TasksMockData())
 }

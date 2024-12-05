@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C2ABACA52CF75A6A008A2D53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2ABACA42CF75A6A008A2D53 /* Assets.xcassets */; };
+		C2ABACA82CFDC9AA008A2D53 /* TaskCRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ABACA72CFDC9A9008A2D53 /* TaskCRUD.swift */; };
 		C2CBF33C2CF7212900721136 /* DetailScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3302CF7212900721136 /* DetailScreenView.swift */; };
 		C2CBF33D2CF7212900721136 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3322CF7212900721136 /* TaskModel.swift */; };
 		C2CBF33E2CF7212900721136 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3342CF7212900721136 /* MainScreenView.swift */; };
-		C2CBF33F2CF7212900721136 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3352CF7212900721136 /* SwiftUIView.swift */; };
 		C2CBF3402CF7212900721136 /* TaskListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3362CF7212900721136 /* TaskListRowView.swift */; };
 		C2CBF3412CF7212900721136 /* Viper_SwiftUI_CoreDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF33A2CF7212900721136 /* Viper_SwiftUI_CoreDataApp.swift */; };
 		C2CBF3422CF7212900721136 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CBF3382CF7212900721136 /* Preview Assets.xcassets */; };
@@ -44,13 +44,13 @@
 
 /* Begin PBXFileReference section */
 		C2ABACA42CF75A6A008A2D53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2ABACA72CFDC9A9008A2D53 /* TaskCRUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCRUD.swift; sourceTree = "<group>"; };
 		C2CBF2B92CF0A6AF00721136 /* Viper_SwiftUI_CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viper_SwiftUI_CoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CBF2C92CF0A6B100721136 /* Viper_SwiftUI_CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Viper_SwiftUI_CoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CBF2D32CF0A6B100721136 /* Viper_SwiftUI_CoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Viper_SwiftUI_CoreDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CBF3302CF7212900721136 /* DetailScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenView.swift; sourceTree = "<group>"; };
 		C2CBF3322CF7212900721136 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		C2CBF3342CF7212900721136 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
-		C2CBF3352CF7212900721136 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		C2CBF3362CF7212900721136 /* TaskListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListRowView.swift; sourceTree = "<group>"; };
 		C2CBF3382CF7212900721136 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C2CBF33A2CF7212900721136 /* Viper_SwiftUI_CoreDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viper_SwiftUI_CoreDataApp.swift; sourceTree = "<group>"; };
@@ -89,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C2ABACA62CFDC95C008A2D53 /* CRUD */ = {
+			isa = PBXGroup;
+			children = (
+				C2ABACA72CFDC9A9008A2D53 /* TaskCRUD.swift */,
+			);
+			path = CRUD;
+			sourceTree = "<group>";
+		};
 		C2CBF2B02CF0A6AF00721136 = {
 			isa = PBXGroup;
 			children = (
@@ -129,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				C2CBF3342CF7212900721136 /* MainScreenView.swift */,
-				C2CBF3352CF7212900721136 /* SwiftUIView.swift */,
 				C2CBF3362CF7212900721136 /* TaskListRowView.swift */,
 			);
 			path = MainScreenViews;
@@ -166,6 +173,7 @@
 		C2CBF34A2CF7212F00721136 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				C2ABACA62CFDC95C008A2D53 /* CRUD */,
 				C2CBF3442CF7212F00721136 /* MockData */,
 				C2CBF3462CF7212F00721136 /* Colors.xcassets */,
 				C2ABACA42CF75A6A008A2D53 /* Assets.xcassets */,
@@ -344,10 +352,10 @@
 			files = (
 				C2CBF33C2CF7212900721136 /* DetailScreenView.swift in Sources */,
 				C2CBF34B2CF7212F00721136 /* TasksMockData.swift in Sources */,
+				C2ABACA82CFDC9AA008A2D53 /* TaskCRUD.swift in Sources */,
 				C2CBF34C2CF7212F00721136 /* Theme.swift in Sources */,
 				C2CBF33D2CF7212900721136 /* TaskModel.swift in Sources */,
 				C2CBF33E2CF7212900721136 /* MainScreenView.swift in Sources */,
-				C2CBF33F2CF7212900721136 /* SwiftUIView.swift in Sources */,
 				C2CBF3402CF7212900721136 /* TaskListRowView.swift in Sources */,
 				C2CBF3412CF7212900721136 /* Viper_SwiftUI_CoreDataApp.swift in Sources */,
 			);

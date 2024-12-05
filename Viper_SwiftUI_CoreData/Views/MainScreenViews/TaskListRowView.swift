@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TaskListRowView: View {
     
-    var taskTitle: String = "Task title"
+    var taskName: String = "Task name"
     var taskDescription: String = "Task description"
     var taskCreationDate: Date = Date.now
     
@@ -32,7 +32,7 @@ struct TaskListRowView: View {
                 })
                
                 if taskCompleted {
-                    Text(taskTitle)
+                    Text(taskName)
                         .opacity(0.5)
                         .font(Font.mainFont)
                         .strikethrough()
@@ -57,7 +57,7 @@ struct TaskListRowView: View {
                             }
                         }
                 } else {
-                    Text(taskTitle)
+                    Text(taskName)
                         .font(Font.mainFont)
                         .foregroundStyle(Color.white)
                         .contextMenu {

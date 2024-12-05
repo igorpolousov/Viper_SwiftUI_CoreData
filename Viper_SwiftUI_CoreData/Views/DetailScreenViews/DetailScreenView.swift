@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailScreenView: View {
     
-    var headerName: String = "Header name"
+    var taskName: String = "Task name"
     var date: Date = Date.now
     @Binding var taskDescription: String
     
@@ -18,7 +18,7 @@ struct DetailScreenView: View {
             Color.black.ignoresSafeArea(.all)
             VStack {
                 HStack {
-                    Text(headerName)
+                    Text(taskName)
                         .font(Font.headerFont)
                         .foregroundStyle(Color.white)
                     Spacer()
