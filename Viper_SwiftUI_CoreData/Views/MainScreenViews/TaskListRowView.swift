@@ -9,11 +9,13 @@ import SwiftUI
 
 struct TaskListRowView: View {
     
-    var taskName: String = "Task name"
-    var taskDescription: String = "Task description"
-    var taskDate: Date = Date.now
+     var taskName: String = "Task name"
+     var taskDescription: String = "Task description"
+     var taskDate: Date = Date.now
+     var taskIndex: Int?
     
     @State var taskCompleted: Bool = false
+    @EnvironmentObject var tasksMockData: TasksData
     
     var body: some View {
         
@@ -52,6 +54,8 @@ struct TaskListRowView: View {
                             
                             Button(role: .destructive) {
                                 print("Удалить задачу")
+                                tasksMockData.deleteTask(at: taskIndex!)
+                                print("Задача удалена")
                             } label: {
                                 Label("Удалить", image: "trash")
                             }
@@ -75,6 +79,8 @@ struct TaskListRowView: View {
                             
                             Button(role: .destructive) {
                                 print("Удалить задачу")
+                                tasksMockData.deleteTask(at: taskIndex!)
+                                print("Задача удалена")
                             } label: {
                                 Label("Удалить", image: "trash") 
                             }

@@ -9,8 +9,8 @@ import Foundation
 import Combine
 
 
-class TasksData: ObservableObject {
- 
+ class TasksData: ObservableObject {
+    
     @Published var allTasks: [TaskModel] = [
         TaskModel(id: UUID(), taskName: "First step", taskDescription: "View", taskDate: Date.now + 1, isCompleted: false),
         TaskModel(id: UUID(), taskName: "Second step", taskDescription: "Interactor", taskDate: Date.now + 2, isCompleted: false),
@@ -21,6 +21,27 @@ class TasksData: ObservableObject {
     
     @Published var searchText: String = ""
     @Published var filteredTasks: [TaskModel] = []
+     
+     // Create new task
+     func createNewTask(taskName: String = "New task", taskDescription: String = "Add description") {
+         let task = TaskModel(id: UUID(), taskName: taskName, taskDescription: taskDescription, taskDate: Date.now, isCompleted: false)
+         
+         allTasks.append(task)
+     }
+     
+     // Update task
+     func updateTask(at index: Int, taskName: String, taskDescription: String) {
+         allTasks[index].taskName = taskName
+         allTasks[index].taskDescription = taskDescription
+     }
+     
+     
+     
+     // Delete task by Index
+     func deleteTask(at index: Int) {
+         allTasks.remove(at: index)
+     }
+     
     private var cancellables = Set<AnyCancellable>()
     
     var isSeaching: Bool {

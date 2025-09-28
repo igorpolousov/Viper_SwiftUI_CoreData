@@ -56,7 +56,7 @@ struct DetailScreenView: View {
         }
         .onDisappear {
             // update task data
-            TaskFunctions.updateTask(update_at: taskIndex ?? 0, taskName: taskName, taskDescription: taskDescription, dataStorage: &tasksMockData.allTasks)
+            tasksMockData.updateTask(at: taskIndex!, taskName: taskName, taskDescription: taskDescription)
         }
     }
 }

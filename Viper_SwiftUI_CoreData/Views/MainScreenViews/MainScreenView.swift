@@ -26,7 +26,7 @@ struct MainScreenView: View {
                                 .opacity(0.0)
                                 .frame(height: 0)
                             
-                            TaskListRowView(taskName: task.taskName, taskDescription: task.taskDescription, taskDate: task.taskDate, taskCompleted: false)
+                            TaskListRowView(taskName: task.taskName, taskDescription: task.taskDescription, taskDate: task.taskDate, taskIndex: taskIndex!, taskCompleted: false)
                             
                         }
                         .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
@@ -56,7 +56,7 @@ struct MainScreenView: View {
                             // Creating new task button
                             Button {
                                 withAnimation(.easeInOut(duration: 0.25)) {
-                                    TaskFunctions.createNewTask(dataStorage: &tasksData.allTasks)
+                                    tasksData.createNewTask()
                                 }
                             } label: {
                                 Image("newTask")
