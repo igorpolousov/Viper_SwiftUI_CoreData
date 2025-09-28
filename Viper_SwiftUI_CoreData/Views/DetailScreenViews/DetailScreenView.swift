@@ -31,7 +31,7 @@ struct DetailScreenView: View {
                             showDoneButton.toggle()
                             dismiss()
                         } label: {
-                            Text("Done")
+                            Text("Готово")
                                 .foregroundStyle(Color.accent)
                                 .font(.headline)
                         }

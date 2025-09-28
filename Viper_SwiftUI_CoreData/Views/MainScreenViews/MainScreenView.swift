@@ -27,10 +27,9 @@ struct MainScreenView: View {
                                 .frame(height: 0)
                             
                             TaskListRowView(taskName: task.taskName, taskDescription: task.taskDescription, taskDate: task.taskDate, taskIndex: taskIndex!, taskCompleted: false)
-                            
+                            // May be add some swipe actions
                         }
                         .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
-                        
                     }
                 }
                 // buttonStyle allows TaskListRowView to work buttons correctly
