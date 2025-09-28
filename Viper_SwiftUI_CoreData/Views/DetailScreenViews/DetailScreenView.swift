@@ -15,6 +15,7 @@ struct DetailScreenView: View {
     @State private var taskDate: Date = Date.now
     
     @EnvironmentObject var tasksMockData: TasksData
+    @Environment(\.dismiss) var dismiss
     @State var taskIndex: Int?
     
     var body: some View {
@@ -57,6 +58,7 @@ struct DetailScreenView: View {
         .onDisappear {
             // update task data
             tasksMockData.updateTask(at: taskIndex!, taskName: taskName, taskDescription: taskDescription)
+            dismiss()
         }
     }
 }
