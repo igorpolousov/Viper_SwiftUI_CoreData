@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C211F8ED2D1D7B1800003A60 /* TO_DO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C211F8EC2D1D7B0B00003A60 /* TO_DO.swift */; };
+		C2A03C442E896DEF004FDD23 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A03C432E896DEF004FDD23 /* CoreDataStack.swift */; };
 		C2ABACA52CF75A6A008A2D53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2ABACA42CF75A6A008A2D53 /* Assets.xcassets */; };
 		C2CBF33C2CF7212900721136 /* DetailScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3302CF7212900721136 /* DetailScreenView.swift */; };
 		C2CBF33D2CF7212900721136 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3322CF7212900721136 /* TaskModel.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		C211F8EC2D1D7B0B00003A60 /* TO_DO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TO_DO.swift; sourceTree = "<group>"; };
+		C2A03C432E896DEF004FDD23 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		C2ABACA42CF75A6A008A2D53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2CBF2B92CF0A6AF00721136 /* Viper_SwiftUI_CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viper_SwiftUI_CoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CBF2C92CF0A6B100721136 /* Viper_SwiftUI_CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Viper_SwiftUI_CoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C2A03C422E896DD5004FDD23 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C2A03C432E896DEF004FDD23 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		C2CBF2B02CF0A6AF00721136 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +175,7 @@
 		C2CBF34A2CF7212F00721136 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				C2A03C422E896DD5004FDD23 /* CoreData */,
 				C2CBF3442CF7212F00721136 /* MockData */,
 				C2CBF3462CF7212F00721136 /* Colors.xcassets */,
 				C2ABACA42CF75A6A008A2D53 /* Assets.xcassets */,
@@ -345,6 +356,7 @@
 				C211F8ED2D1D7B1800003A60 /* TO_DO.swift in Sources */,
 				C2CBF33C2CF7212900721136 /* DetailScreenView.swift in Sources */,
 				C2CBF34B2CF7212F00721136 /* TasksData.swift in Sources */,
+				C2A03C442E896DEF004FDD23 /* CoreDataStack.swift in Sources */,
 				C2CBF34C2CF7212F00721136 /* Theme.swift in Sources */,
 				C2CBF33D2CF7212900721136 /* TaskModel.swift in Sources */,
 				C2CBF33E2CF7212900721136 /* MainScreenView.swift in Sources */,
