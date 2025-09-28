@@ -86,7 +86,7 @@ struct TaskListRowView: View {
             .frame(height: 106)
             .background(Color.black)
             .sheet(isPresented: $isShowDetailView) {
-                DetailScreenView(taskIndex: taskIndex)
+                DetailScreenView(taskIndex: taskIndex, showDoneButton: true)
             }
         }
 }
