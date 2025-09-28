@@ -60,23 +60,15 @@ struct TaskListRowView: View {
                 HStack {
                     VStack{}.frame(width: 25)
                     VStack(alignment: .leading) {
-                        if taskCompleted {
+
                             Text(taskDescription)
-                                .opacity(0.5)
+                                .opacity(taskCompleted ? 0.5 : 1)
                                 .font(Font.secondaryFont)
                             
                             Text(String(taskDate.formatted(date: .numeric, time: .omitted)))
-                                .opacity(0.5)
+                                .opacity(taskCompleted ? 0.5 : 1)
                                 .font(Font.secondaryFont)
-                            
-                        } else {
-                            Text(taskDescription)
-                                .font(Font.secondaryFont)
-                            
-                            Text(String(taskDate.formatted(date: .numeric, time: .omitted)))
-                                .font(Font.secondaryFont)
-                            
-                        }
+
                     }
                 }
                 .foregroundStyle(Color.white)
