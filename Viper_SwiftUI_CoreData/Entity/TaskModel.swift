@@ -8,12 +8,12 @@
 import Foundation
 
 
-struct TaskModel: Identifiable, Codable, Hashable {
-    
-    var id: UUID
-    var taskName: String
-    var taskDescription: String
-    var taskDate: Date
-    var isCompleted: Bool
-    
-}
+//struct TaskModel: Identifiable, Codable, Hashable {
+//    
+//    var id: UUID
+//    var taskName: String
+//    var taskDescription: String
+//    var taskDate: Date
+//    var isCompleted: Bool
+//    
+//}

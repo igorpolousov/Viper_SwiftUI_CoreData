@@ -24,6 +24,9 @@
 		C2CBF3532CF7213500721136 /* Viper_SwiftUI_CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3512CF7213500721136 /* Viper_SwiftUI_CoreDataTests.swift */; };
 		C2CBF3572CF7213A00721136 /* Viper_SwiftUI_CoreDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3542CF7213A00721136 /* Viper_SwiftUI_CoreDataUITests.swift */; };
 		C2CBF3582CF7213A00721136 /* Viper_SwiftUI_CoreDataUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3552CF7213A00721136 /* Viper_SwiftUI_CoreDataUITestsLaunchTests.swift */; };
+		C2EE61112E898FB500AC5723 /* Viper_SwiftUI_CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2EE610F2E898FB400AC5723 /* Viper_SwiftUI_CoreData.xcdatamodeld */; };
+		C2EE61142E89908800AC5723 /* TaskModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EE61122E89908800AC5723 /* TaskModel+CoreDataClass.swift */; };
+		C2EE61152E89908800AC5723 /* TaskModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EE61132E89908800AC5723 /* TaskModel+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		C2CBF3512CF7213500721136 /* Viper_SwiftUI_CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viper_SwiftUI_CoreDataTests.swift; sourceTree = "<group>"; };
 		C2CBF3542CF7213A00721136 /* Viper_SwiftUI_CoreDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viper_SwiftUI_CoreDataUITests.swift; sourceTree = "<group>"; };
 		C2CBF3552CF7213A00721136 /* Viper_SwiftUI_CoreDataUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viper_SwiftUI_CoreDataUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C2EE61102E898FB400AC5723 /* Viper_SwiftUI_CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Viper_SwiftUI_CoreData.xcdatamodel; sourceTree = "<group>"; };
+		C2EE61122E89908800AC5723 /* TaskModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C2EE61132E89908800AC5723 /* TaskModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +100,10 @@
 		C2A03C422E896DD5004FDD23 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				C2EE61132E89908800AC5723 /* TaskModel+CoreDataProperties.swift */,
+				C2EE61122E89908800AC5723 /* TaskModel+CoreDataClass.swift */,
 				C2A03C432E896DEF004FDD23 /* CoreDataStack.swift */,
+				C2EE610F2E898FB400AC5723 /* Viper_SwiftUI_CoreData.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -356,9 +365,12 @@
 				C211F8ED2D1D7B1800003A60 /* TO_DO.swift in Sources */,
 				C2CBF33C2CF7212900721136 /* DetailScreenView.swift in Sources */,
 				C2CBF34B2CF7212F00721136 /* TasksData.swift in Sources */,
+				C2EE61112E898FB500AC5723 /* Viper_SwiftUI_CoreData.xcdatamodeld in Sources */,
 				C2A03C442E896DEF004FDD23 /* CoreDataStack.swift in Sources */,
 				C2CBF34C2CF7212F00721136 /* Theme.swift in Sources */,
 				C2CBF33D2CF7212900721136 /* TaskModel.swift in Sources */,
+				C2EE61142E89908800AC5723 /* TaskModel+CoreDataClass.swift in Sources */,
+				C2EE61152E89908800AC5723 /* TaskModel+CoreDataProperties.swift in Sources */,
 				C2CBF33E2CF7212900721136 /* MainScreenView.swift in Sources */,
 				C2CBF3402CF7212900721136 /* TaskListRowView.swift in Sources */,
 				C2CBF3412CF7212900721136 /* Viper_SwiftUI_CoreDataApp.swift in Sources */,
@@ -681,6 +693,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C2EE610F2E898FB400AC5723 /* Viper_SwiftUI_CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C2EE61102E898FB400AC5723 /* Viper_SwiftUI_CoreData.xcdatamodel */,
+			);
+			currentVersion = C2EE61102E898FB400AC5723 /* Viper_SwiftUI_CoreData.xcdatamodel */;
+			path = Viper_SwiftUI_CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C2CBF2B12CF0A6AF00721136 /* Project object */;
 }

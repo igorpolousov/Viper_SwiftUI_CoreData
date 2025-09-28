@@ -70,9 +70,9 @@ struct TaskListRowView: View {
                                 .font(Font.secondaryFont)
                             
                         } else {
-                            
                             Text(taskDescription)
                                 .font(Font.secondaryFont)
+                            
                             Text(String(taskDate.formatted(date: .numeric, time: .omitted)))
                                 .font(Font.secondaryFont)
                             

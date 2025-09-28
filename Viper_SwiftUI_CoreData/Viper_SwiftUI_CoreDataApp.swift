@@ -10,13 +10,15 @@ import SwiftUI
 @main
 struct Viper_SwiftUI_CoreDataApp: App {
     
+    
     // Data for List view
-    var tasksMockData = TasksData()
+    var taskskData = TasksData()
+    
     
     var body: some Scene {
         WindowGroup {
             MainScreenView()
-                .environmentObject(tasksMockData)
+                .environmentObject(taskskData)
         }
     }
 }
