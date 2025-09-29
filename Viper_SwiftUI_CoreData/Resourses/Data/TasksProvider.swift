@@ -14,6 +14,8 @@ import CoreData
      
      // Create Core Data stack
      let coreDataStack = CoreDataStack(modelName: "Viper_SwiftUI_CoreData")
+     
+     let client: TasksClient
     
     @Published var tasks: [TaskModel] = []
 
@@ -75,7 +77,8 @@ import CoreData
         !searchText.isEmpty
     }
     
-    init() {
+     init(client: TasksClient = TasksClient()) {
+        self.client = client
         addSubscribers()
         readTasks()
     }

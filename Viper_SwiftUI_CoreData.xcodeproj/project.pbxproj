@@ -30,6 +30,7 @@
 		C2EE61182E8A629500AC5723 /* HTTPDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EE61172E8A629500AC5723 /* HTTPDataDownloader.swift */; };
 		C2EE611A2E8A645000AC5723 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EE61192E8A645000AC5723 /* ErrorHandler.swift */; };
 		C2EE611C2E8A6CF800AC5723 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EE611B2E8A6CF800AC5723 /* Task.swift */; };
+		C2EE611E2E8A72E000AC5723 /* TasksClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EE611D2E8A72E000AC5723 /* TasksClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		C2EE61172E8A629500AC5723 /* HTTPDataDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDataDownloader.swift; sourceTree = "<group>"; };
 		C2EE61192E8A645000AC5723 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		C2EE611B2E8A6CF800AC5723 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		C2EE611D2E8A72E000AC5723 /* TasksClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				C2EE61172E8A629500AC5723 /* HTTPDataDownloader.swift */,
+				C2EE611D2E8A72E000AC5723 /* TasksClient.swift */,
 			);
 			path = DataDownloader;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C211F8ED2D1D7B1800003A60 /* TO_DO.swift in Sources */,
+				C2EE611E2E8A72E000AC5723 /* TasksClient.swift in Sources */,
 				C2CBF33C2CF7212900721136 /* DetailScreenView.swift in Sources */,
 				C2CBF34B2CF7212F00721136 /* TasksProvider.swift in Sources */,
 				C2EE61112E898FB500AC5723 /* Viper_SwiftUI_CoreData.xcdatamodeld in Sources */,

@@ -32,7 +32,7 @@ extension Task: Decodable {
         guard   let id = rawId,
                 let todo = rawTodo,
                 let completed = rawCompleted,
-                let userId = rawId
+                let userId = rawUserId
         else { throw ErrorHandler.missingData}
         
         self.id = id
