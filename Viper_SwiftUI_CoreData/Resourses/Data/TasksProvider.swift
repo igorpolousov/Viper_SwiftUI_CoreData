@@ -26,7 +26,7 @@ import CoreData
          let latestTasks = try await client.tasks
          // Todos -> TaskModel
          for task in latestTasks {
-             createNewTask(taskName: task.todo, isCompleted: task.completed )
+             createNewTask(taskName: task.todo, isCompleted: task.completed)
          }
      }
      
@@ -52,6 +52,8 @@ import CoreData
      func createNewTask(taskName: String = "New task", taskDescription: String = "Add description", isCompleted: Bool = false) {
          //let task = TaskModel(id: UUID(), taskName: taskName, taskDescription: taskDescription, taskDate: Date.now, isCompleted: false)
          let task = TaskModel(context: coreDataStack.managedContext)
+         //task.id = id
+         //task.userId = userId
          task.id = UUID()
          task.taskName = taskName
          task.taskDescription = taskDescription

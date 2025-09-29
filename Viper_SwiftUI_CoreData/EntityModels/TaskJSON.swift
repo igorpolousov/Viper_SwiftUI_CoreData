@@ -12,7 +12,7 @@ struct Todos: Decodable {
 }
 
 struct Todo: Decodable {
-    var id,userId: Int
+    var id,userId: Double
     var completed: Bool
     var todo: String
     
