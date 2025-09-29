@@ -69,6 +69,20 @@ struct MainScreenView: View {
                 .searchable(text: $tasksData.searchText, placement: .automatic, prompt: Text("Search in tasks"))
             }
         }
+        .task {
+            await fetchTasks()
+        }
+    }
+}
+
+extension MainScreenView {
+    func fetchTasks() async {
+        do {
+            try await tasksData.fetchTasks()
+            
+        } catch let error as NSError {
+            print("Unable to download data \(error.localizedDescription) ")
+        }
     }
 }
 

@@ -22,6 +22,14 @@ import CoreData
     @Published var searchText: String = ""
     @Published var filteredTasks: [TaskModel] = []
      
+     func fetchTasks() async throws {
+         let latestTasks = try await client.tasks
+         // Todos -> TaskModel
+         for task in latestTasks {
+             createNewTask(taskName: task.todo, isCompleted: task.completed )
+         }
+     }
+     
      // Read tasks from core data
       func readTasks() {
          let fetchRequest: NSFetchRequest<TaskModel> = TaskModel.fetchRequest()
@@ -41,14 +49,14 @@ import CoreData
      }
      
      // Create new task
-     func createNewTask(taskName: String = "New task", taskDescription: String = "Add description") {
+     func createNewTask(taskName: String = "New task", taskDescription: String = "Add description", isCompleted: Bool = false) {
          //let task = TaskModel(id: UUID(), taskName: taskName, taskDescription: taskDescription, taskDate: Date.now, isCompleted: false)
          let task = TaskModel(context: coreDataStack.managedContext)
          task.id = UUID()
          task.taskName = taskName
          task.taskDescription = taskDescription
          task.taskDate = Date.now
-         task.isCompleted = false
+         task.isCompleted = isCompleted
          tasks.append(task)
          coreDataStack.saveContext()
      }
@@ -70,17 +78,18 @@ import CoreData
          tasks.remove(at: index)
      }
      
+     // Init
+     init(client: TasksClient = TasksClient()) {
+        self.client = client
+        addSubscribers()
+        readTasks()
+    }
+     
      // Searchinig in tasks
     private var cancellables = Set<AnyCancellable>()
     
     var isSeaching: Bool {
         !searchText.isEmpty
-    }
-    
-     init(client: TasksClient = TasksClient()) {
-        self.client = client
-        addSubscribers()
-        readTasks()
     }
     
     private func addSubscribers() {

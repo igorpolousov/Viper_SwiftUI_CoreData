@@ -7,6 +7,17 @@
 
 import Foundation
 
+struct Todos: Decodable {
+    var todos: [Todo]
+}
+
+struct Todo: Decodable {
+    var id,userId: Int
+    var completed: Bool
+    var todo: String
+    
+}
+
 struct TaskJSON: Decodable {
     
     private enum RootCodingKeys: String, CodingKey {
@@ -14,11 +25,14 @@ struct TaskJSON: Decodable {
     }
     
     private(set) var tasks: [Task] = []
+    private(set) var todos: [Todo] = []
     
     init(from decoder: any Decoder) throws {
-        let container = try decoder.container(keyedBy: RootCodingKeys.self)
-        if let task = try? container.decode(Task.self, forKey: .todos) {
-            tasks.append(task)
+        let decoder1 = JSONDecoder()
+        if let data = try? Data(contentsOf: URL(string: "https://dummyjson.com/todos")!) {
+            if let result = try? decoder1.decode(Todos.self, from: data) {
+                todos = result.todos
+            }
         }
     }
 }

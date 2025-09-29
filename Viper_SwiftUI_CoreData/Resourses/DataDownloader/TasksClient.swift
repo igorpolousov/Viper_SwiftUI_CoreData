@@ -8,15 +8,13 @@
 import Foundation
 
 actor TasksClient {
-    
-    var tasks: [Task] {
+    var tasks: [Todo] {
         get async throws {
             let data = try await downLoader.httpData(from: feedURL)
             let allTasks = try decoder.decode(TaskJSON.self, from: data)
-            let tasks = allTasks.tasks
+            let tasks = allTasks.todos
             return tasks
         }
-        
     }
     
     private let downLoader: any HTTPDataDownloader
