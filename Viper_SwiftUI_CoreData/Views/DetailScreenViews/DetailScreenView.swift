@@ -14,7 +14,7 @@ struct DetailScreenView: View {
     @State private var taskDescription: String = ""
     @State private var taskDate: Date = Date.now
     
-    @EnvironmentObject var tasksMockData: TasksData
+    @EnvironmentObject var tasksMockData: TasksProvider
     @Environment(\.dismiss) var dismiss
     @State var taskIndex: Int?
     @State var showDoneButton: Bool = false
@@ -67,7 +67,7 @@ struct DetailScreenView: View {
         }
         .onAppear {
             // Get data from Environment object
-            let task = tasksMockData.allTasks[taskIndex ?? 0]
+            let task = tasksMockData.tasks[taskIndex ?? 0]
             taskName = task.taskName
             taskDescription = task.taskDescription
             taskDate = task.taskDate
@@ -83,5 +83,5 @@ struct DetailScreenView: View {
 #Preview {
     //@Previewable @State var taskDescription: String = ""
     DetailScreenView(taskIndex: 0)
-        .environmentObject(TasksData())
+        .environmentObject(TasksProvider())
 }

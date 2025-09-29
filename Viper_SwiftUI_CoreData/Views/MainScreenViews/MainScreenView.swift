@@ -10,15 +10,15 @@ import Combine
 
 struct MainScreenView: View {
     
-    @EnvironmentObject var tasksData: TasksData
+    @EnvironmentObject var tasksData: TasksProvider
     
     var body: some View {
         ZStack {
             NavigationView {
                 // Show list of available tasks
                 List { // Consider to use Scroll view instead of List -> Make code easyer
-                    ForEach(tasksData.isSeaching ? tasksData.filteredTasks : tasksData.allTasks, id: \.self) { task in
-                        let taskIndex = tasksData.allTasks.firstIndex(of: task)
+                    ForEach(tasksData.isSeaching ? tasksData.filteredTasks : tasksData.tasks, id: \.self) { task in
+                        let taskIndex = tasksData.tasks.firstIndex(of: task)
                         ZStack {
                             // Go to Task Details Screen for editing
                             NavigationLink(destination: DetailScreenView(taskIndex: taskIndex)) {}
@@ -47,7 +47,7 @@ struct MainScreenView: View {
                             Spacer(minLength: 150)
                             
                             // Tasks counter bottom toolbar
-                            Text("\(tasksData.allTasks.count) Tasks")
+                            Text("\(tasksData.tasks.count) Tasks")
                                 .foregroundStyle(Color.accentColor)
                             
                             Spacer()
@@ -75,5 +75,5 @@ struct MainScreenView: View {
 
 #Preview {
     MainScreenView()
-        .environmentObject(TasksData())
+        .environmentObject(TasksProvider())
 }

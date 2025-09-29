@@ -15,7 +15,7 @@ struct TaskListRowView: View {
      var taskIndex: Int?
     
     @State var taskCompleted: Bool = false
-    @EnvironmentObject var tasksMockData: TasksData
+    @EnvironmentObject var tasksMockData: TasksProvider
     @State private var isShowDetailView: Bool = false
     
     var body: some View {

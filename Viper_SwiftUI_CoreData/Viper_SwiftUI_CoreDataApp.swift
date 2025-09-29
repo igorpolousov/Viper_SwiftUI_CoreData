@@ -12,7 +12,7 @@ struct Viper_SwiftUI_CoreDataApp: App {
     
     
     // Data for List view
-    var taskskData = TasksData()
+    var taskskData = TasksProvider()
     
     
     var body: some Scene {

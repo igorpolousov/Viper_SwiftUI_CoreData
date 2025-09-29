@@ -10,12 +10,12 @@ import Combine
 import CoreData
 
 
- class TasksData: ObservableObject {
+ class TasksProvider: ObservableObject {
      
      // Create Core Data stack
      let coreDataStack = CoreDataStack(modelName: "Viper_SwiftUI_CoreData")
     
-    @Published var allTasks: [TaskModel] = [
+    @Published var tasks: [TaskModel] = [
 //        TaskModel(id: UUID(), taskName: "First step", taskDescription: "View", taskDate: Date.now + 1, isCompleted: false),
 //        TaskModel(id: UUID(), taskName: "Second step", taskDescription: "Interactor", taskDate: Date.now + 2, isCompleted: false),
 //        TaskModel(id: UUID(), taskName: "Third step", taskDescription: "Presenter", taskDate: Date.now + 3, isCompleted: false),
@@ -34,7 +34,7 @@ import CoreData
           asyncFetchRequest = NSAsynchronousFetchRequest<TaskModel>(fetchRequest: fetchRequest) {[weak self]
              (result: NSAsynchronousFetchResult) in
              guard let fetchResult = result.finalResult else {return}
-             self?.allTasks = fetchResult
+             self?.tasks = fetchResult
          }
          
          do {
@@ -54,25 +54,25 @@ import CoreData
          task.taskDescription = taskDescription
          task.taskDate = Date.now
          task.isCompleted = false
-         allTasks.append(task)
+         tasks.append(task)
          coreDataStack.saveContext()
      }
      
      // Update task
      func updateTask(at index: Int, taskName: String, taskDescription: String) {
-         let tripToUpdate = allTasks[index]
+         let tripToUpdate = tasks[index]
          tripToUpdate.taskName = taskName
          tripToUpdate.taskDescription = taskDescription
-         allTasks[index] = tripToUpdate
+         tasks[index] = tripToUpdate
          coreDataStack.saveContext()
      }
      
      // Delete task by Index
      func deleteTask(at index: Int) {
-         let taskToRemove = allTasks[index]
+         let taskToRemove = tasks[index]
          coreDataStack.managedContext.delete(taskToRemove)
          coreDataStack.saveContext()
-         allTasks.remove(at: index)
+         tasks.remove(at: index)
      }
      
      // Searchinig in tasks
@@ -103,7 +103,7 @@ import CoreData
             return
         }
         
-        filteredTasks = allTasks.filter({ task in
+        filteredTasks = tasks.filter({ task in
             let search = seachText.lowercased()
             let taskNameContainsSearch = task.taskName.lowercased().contains(search)
             let taskDescriptionContainsSearch = task.taskDescription.lowercased().contains(search)
