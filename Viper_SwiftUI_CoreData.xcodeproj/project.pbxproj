@@ -11,7 +11,7 @@
 		C2A03C442E896DEF004FDD23 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A03C432E896DEF004FDD23 /* CoreDataStack.swift */; };
 		C2ABACA52CF75A6A008A2D53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2ABACA42CF75A6A008A2D53 /* Assets.xcassets */; };
 		C2CBF33C2CF7212900721136 /* DetailScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3302CF7212900721136 /* DetailScreenView.swift */; };
-		C2CBF33D2CF7212900721136 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3322CF7212900721136 /* TaskModel.swift */; };
+		C2CBF33D2CF7212900721136 /* TaskJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3322CF7212900721136 /* TaskJSON.swift */; };
 		C2CBF33E2CF7212900721136 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3342CF7212900721136 /* MainScreenView.swift */; };
 		C2CBF3402CF7212900721136 /* TaskListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF3362CF7212900721136 /* TaskListRowView.swift */; };
 		C2CBF3412CF7212900721136 /* Viper_SwiftUI_CoreDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBF33A2CF7212900721136 /* Viper_SwiftUI_CoreDataApp.swift */; };
@@ -29,6 +29,7 @@
 		C2EE61152E89908800AC5723 /* TaskModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EE61132E89908800AC5723 /* TaskModel+CoreDataProperties.swift */; };
 		C2EE61182E8A629500AC5723 /* HTTPDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EE61172E8A629500AC5723 /* HTTPDataDownloader.swift */; };
 		C2EE611A2E8A645000AC5723 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EE61192E8A645000AC5723 /* ErrorHandler.swift */; };
+		C2EE611C2E8A6CF800AC5723 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EE611B2E8A6CF800AC5723 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +57,7 @@
 		C2CBF2C92CF0A6B100721136 /* Viper_SwiftUI_CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Viper_SwiftUI_CoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CBF2D32CF0A6B100721136 /* Viper_SwiftUI_CoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Viper_SwiftUI_CoreDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CBF3302CF7212900721136 /* DetailScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenView.swift; sourceTree = "<group>"; };
-		C2CBF3322CF7212900721136 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		C2CBF3322CF7212900721136 /* TaskJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskJSON.swift; sourceTree = "<group>"; };
 		C2CBF3342CF7212900721136 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		C2CBF3362CF7212900721136 /* TaskListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListRowView.swift; sourceTree = "<group>"; };
 		C2CBF3382CF7212900721136 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 		C2EE61132E89908800AC5723 /* TaskModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C2EE61172E8A629500AC5723 /* HTTPDataDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDataDownloader.swift; sourceTree = "<group>"; };
 		C2EE61192E8A645000AC5723 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		C2EE611B2E8A6CF800AC5723 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,13 +142,14 @@
 			path = DetailScreenViews;
 			sourceTree = "<group>";
 		};
-		C2CBF3332CF7212900721136 /* Entity */ = {
+		C2CBF3332CF7212900721136 /* EntityModels */ = {
 			isa = PBXGroup;
 			children = (
-				C2CBF3322CF7212900721136 /* TaskModel.swift */,
+				C2EE611B2E8A6CF800AC5723 /* Task.swift */,
+				C2CBF3322CF7212900721136 /* TaskJSON.swift */,
 				C2EE61192E8A645000AC5723 /* ErrorHandler.swift */,
 			);
-			path = Entity;
+			path = EntityModels;
 			sourceTree = "<group>";
 		};
 		C2CBF3372CF7212900721136 /* MainScreenViews */ = {
@@ -170,7 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				C2CBF3592CF7219500721136 /* Views */,
-				C2CBF3332CF7212900721136 /* Entity */,
+				C2CBF3332CF7212900721136 /* EntityModels */,
 				C2CBF34A2CF7212F00721136 /* Resourses */,
 				C2CBF33A2CF7212900721136 /* Viper_SwiftUI_CoreDataApp.swift */,
 				C2CBF3392CF7212900721136 /* Preview Content */,
@@ -382,7 +385,8 @@
 				C2EE61112E898FB500AC5723 /* Viper_SwiftUI_CoreData.xcdatamodeld in Sources */,
 				C2A03C442E896DEF004FDD23 /* CoreDataStack.swift in Sources */,
 				C2CBF34C2CF7212F00721136 /* Theme.swift in Sources */,
-				C2CBF33D2CF7212900721136 /* TaskModel.swift in Sources */,
+				C2CBF33D2CF7212900721136 /* TaskJSON.swift in Sources */,
+				C2EE611C2E8A6CF800AC5723 /* Task.swift in Sources */,
 				C2EE61142E89908800AC5723 /* TaskModel+CoreDataClass.swift in Sources */,
 				C2EE61152E89908800AC5723 /* TaskModel+CoreDataProperties.swift in Sources */,
 				C2CBF33E2CF7212900721136 /* MainScreenView.swift in Sources */,
