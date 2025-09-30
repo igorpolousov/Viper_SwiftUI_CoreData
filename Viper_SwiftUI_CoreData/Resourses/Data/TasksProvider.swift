@@ -97,6 +97,9 @@ import CoreData
              self.coreDataStack.saveContext()
              DispatchQueue.main.async {
                  self.tasks.remove(at: index)
+                 if let index = self.filteredTasks.firstIndex(of: taskToRemove) {
+                     self.filteredTasks.remove(at: index)
+                 }
              }
          }
      }

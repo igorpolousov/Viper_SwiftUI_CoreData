@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct DetailScreenView: View {
-        
+    
     // vars for showing data for task ans saving updates user made
     @State private var taskName: String = ""
     @State private var taskDescription: String = ""
     @State private var taskDate: Date = Date.now
     
-    @EnvironmentObject var tasksMockData: TasksProvider
+    @EnvironmentObject var tasksData: TasksProvider
     @Environment(\.dismiss) var dismiss
     @State var taskIndex: Int?
     @State var showDoneButton: Bool = false
@@ -39,14 +39,13 @@ struct DetailScreenView: View {
                 }
                 HStack {
                     // Task name info
-                 
-                        TextEditor(text: $taskName)
-                            .scrollContentBackground(.hidden)
-                            .font(Font.headerFont)
-                            .foregroundStyle(Color.white)
-                            .frame(width: UIScreen.main.bounds.width, height: 52)
-                        Spacer()
-                     
+                    TextEditor(text: $taskName)
+                        .scrollContentBackground(.hidden)
+                        .font(Font.headerFont)
+                        .foregroundStyle(Color.white)
+                        .frame(width: UIScreen.main.bounds.width, height: 52)
+                    Spacer()
+                    
                 }
                 HStack {
                     // Task date info
@@ -67,14 +66,14 @@ struct DetailScreenView: View {
         }
         .onAppear {
             // Get data from Environment object
-            let task = tasksMockData.tasks[taskIndex ?? 0]
+            let task = tasksData.tasks[taskIndex ?? 0]
             taskName = task.taskName
             taskDescription = task.taskDescription
             taskDate = task.taskDate
         }
         .onDisappear {
             // update task data
-            tasksMockData.updateTask(at: taskIndex!, taskName: taskName, taskDescription: taskDescription)
+            tasksData.updateTask(at: taskIndex!, taskName: taskName, taskDescription: taskDescription)
             dismiss()
         }
     }

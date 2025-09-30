@@ -26,7 +26,7 @@ struct MainScreenView: View {
                                     .opacity(0.0)
                                     .frame(height: 0)
                                 
-                                TaskListRowView( taskIndex: taskIndex!, taskCompleted: false)
+                                TaskListRowView( task: task, taskCompleted: false)
                             
                             // May be add some swipe actions
                         }
