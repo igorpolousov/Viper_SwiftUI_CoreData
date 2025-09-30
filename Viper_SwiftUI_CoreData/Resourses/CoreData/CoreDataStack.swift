@@ -38,5 +38,4 @@ class CoreDataStack: ObservableObject {
             print("Unable to save context: \(error), \(error.localizedDescription)")
         }
     }
-    
 }

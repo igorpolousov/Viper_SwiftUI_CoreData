@@ -8,6 +8,8 @@
 import XCTest
 @testable import Viper_SwiftUI_CoreData
 
+// What to test: httpDataDownloader, taskClient, core data stack, task provider
+
 final class Viper_SwiftUI_CoreDataTests: XCTestCase {
 
     override func setUpWithError() throws {

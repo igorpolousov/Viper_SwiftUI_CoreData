@@ -8,6 +8,9 @@
 import Foundation
 
 actor TasksClient {
+    
+    // NSCashe optional for client
+    
     var tasks: [Todo] {
         get async throws {
             let data = try await downLoader.httpData(from: feedURL)
