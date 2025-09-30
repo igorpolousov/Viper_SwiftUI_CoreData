@@ -18,15 +18,16 @@ struct MainScreenView: View {
                 // Show list of available tasks
                 List { // Consider to use Scroll view instead of List -> Make code easyer
                     ForEach(tasksData.isSeaching ? tasksData.filteredTasks : tasksData.tasks, id: \.self) { task in
-                        let taskIndex = tasksData.tasks.firstIndex(of: task)
-                        ZStack {
-                            // Go to Task Details Screen for editing
-                            NavigationLink(destination: DetailScreenView(taskIndex: taskIndex)) {}
-                                .buttonStyle(.plain)
-                                .opacity(0.0)
-                                .frame(height: 0)
+                         let taskIndex = tasksData.tasks.firstIndex(of: task)
+                            ZStack {
+                                // Go to Task Details Screen for editing
+                                NavigationLink(destination: DetailScreenView(taskIndex: taskIndex)) {}
+                                    .buttonStyle(.plain)
+                                    .opacity(0.0)
+                                    .frame(height: 0)
+                                
+                                TaskListRowView( taskIndex: taskIndex!, taskCompleted: false)
                             
-                            TaskListRowView(taskName: task.taskName, taskDescription: task.taskDescription, taskDate: task.taskDate, taskIndex: taskIndex!, taskCompleted: false)
                             // May be add some swipe actions
                         }
                         .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))

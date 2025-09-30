@@ -9,13 +9,15 @@ import SwiftUI
 
 struct TaskListRowView: View {
     
-     var taskName: String = "Task name"
-     var taskDescription: String = "Task description"
-     var taskDate: Date = Date.now
-     var taskIndex: Int?
+    @State private var taskName: String = "Task name"
+    @State private var taskDescription: String = "Task description"
+    @State private var taskDate: Date = Date.now
+    @State var taskIndex: Int
+    
+    @State var task: TaskModel?
     
     @State var taskCompleted: Bool = false
-    @EnvironmentObject var tasksMockData: TasksProvider
+    @EnvironmentObject var tasksData: TasksProvider
     @State private var isShowDetailView: Bool = false
     
     var body: some View {
@@ -34,8 +36,7 @@ struct TaskListRowView: View {
                         }
                     })
                     
-                    //if taskCompleted {
-                        Text(taskName)
+                    Text(task!.taskName)
                             .opacity(0.5)
                             .font(Font.mainFont)
                             .strikethrough(taskCompleted)
@@ -50,7 +51,7 @@ struct TaskListRowView: View {
                                 }
                                 
                                 Button("Удалить", image: ImageResource(name: "trash", bundle: .main), role: .destructive) {
-                                    tasksMockData.deleteTask(at: taskIndex!)
+                                    tasksData.deleteTask(at: taskIndex)
                                 }
                              
                             }
@@ -61,7 +62,7 @@ struct TaskListRowView: View {
                     VStack{}.frame(width: 25)
                     VStack(alignment: .leading) {
 
-                            Text(taskDescription)
+                        Text(tasksData.tasks[taskIndex].taskDescription)
                                 .opacity(taskCompleted ? 0.5 : 1)
                                 .font(Font.secondaryFont)
                             
@@ -86,5 +87,5 @@ struct TaskListRowView: View {
 
 
 #Preview {
-    TaskListRowView()
+    TaskListRowView(taskIndex: 0)
 }
