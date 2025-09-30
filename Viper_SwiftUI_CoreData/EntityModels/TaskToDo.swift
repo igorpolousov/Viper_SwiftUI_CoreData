@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct Task: Identifiable {
+struct TaskToDo: Identifiable {
     let id: Int
     let todo: String
     let completed: Bool
     let userId: Int
 }
 
-extension Task: Decodable {
+extension TaskToDo: Decodable {
     private enum CodingKeys: String, CodingKey {
         case id
         case todo

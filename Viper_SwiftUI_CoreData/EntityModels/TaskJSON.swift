@@ -24,7 +24,7 @@ struct TaskJSON: Decodable {
         case todos
     }
     
-    private(set) var tasks: [Task] = []
+    private(set) var tasks: [TaskToDo] = []
     private(set) var todos: [Todo] = []
     
     init(from decoder: any Decoder) throws {

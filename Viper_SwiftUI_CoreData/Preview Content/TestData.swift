@@ -7,7 +7,16 @@
 
 import Foundation
 
-let testData: Data = """
+let testTodoData: Data = """
+    {
+      "id": 1,
+      "todo": "Do something nice for someone you care about",
+      "completed": false,
+      "userId": 152
+    }
+""".data(using: .utf8)!
+
+let testTodosData: Data = """
 {
   "todos": [
     {
