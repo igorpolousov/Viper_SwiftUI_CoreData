@@ -77,12 +77,12 @@ import CoreData
      // Update task
      func updateTask(at index: Int, taskName: String, taskDescription: String) {
          DispatchQueue.global(qos: .background).async {
-             let tripToUpdate = self.tasks[index]
-             tripToUpdate.taskName = taskName
-             tripToUpdate.taskDescription = taskDescription
+             let taskToUpdate = self.tasks[index]
+             taskToUpdate.taskName = taskName
+             taskToUpdate.taskDescription = taskDescription
              print(Thread.current)
              DispatchQueue.main.async {
-                 self.tasks[index] = tripToUpdate
+                 self.tasks[index] = taskToUpdate
                  print(Thread.current)
              }
              self.coreDataStack.saveContext()
